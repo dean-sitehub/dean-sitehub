@@ -41,13 +41,11 @@ nav #nav-links a:hover { opacity: 0.8; }
 #hamburger { display: none; background: none; border: none; color: var(--nav-fg); font-size: 1.5rem; cursor: pointer; font-family: inherit; }
 
 /* HERO */
-#hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 .hero-split-text { background: var(--color-primary); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px; }
 .hero-split-image { background-image: url('hero-800x400.jpg'); background-size: cover; background-position: center; }
-#hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem; }
-#hero p { font-size: clamp(0.95rem, 1.8vw, 1.15rem); margin-bottom: 2rem; }
 .cta-button { display: inline-block; background: var(--color-secondary); color: white;
-  padding: 14px 32px; border-radius: 50px; font-weight: 600; text-decoration: none;
+  padding: 14px 32px; border-radius: var(--border-radius); font-weight: 600; text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s; }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
@@ -59,6 +57,10 @@ section > p:first-of-type { text-align: center; max-width: 700px; margin-left: a
 #about { background: #fff; }
 #offerings { background: #f7f7f7; }
 #contact { background: #fff; }
+/* Center all section body text */
+#about p, #about li { text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; }
+#offerings .container > p { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+#contact .contact-details-row, #contact > .container > p { text-align: center; }
 
 /* CARDS */
 .cards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 2rem; text-align: center; }
@@ -96,16 +98,6 @@ footer a { color: rgba(255,255,255,0.8); }
   nav #nav-links.open { display: flex !important; }
   nav #nav-links li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
   nav #nav-links a { font-size: 1rem; padding: 8px 0; display: flex; align-items: center; min-height: 44px; }
-  #hero { min-height: 80vh; }
-  #hero h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
-  #hero p { font-size: clamp(0.9rem, 3vw, 1.05rem); }
-  section { padding: 48px 16px; }
-  section h2 { font-size: clamp(1.2rem, 5vw, 1.5rem); margin-bottom: 1rem; }
-  .cards-grid { grid-template-columns: 1fr; gap: 16px; }
-  .card { padding: 20px; }
-  .contact-details-row { flex-direction: column; align-items: center; gap: 16px; }
-  .about-grid { grid-template-columns: 1fr; }
-
   .cta-button { padding: 14px 28px; font-size: 1rem; min-height: 48px; }
   .hero-split { grid-template-columns: 1fr; }
   .hero-split-text { padding: 40px 20px; min-height: 50vh; }
@@ -117,9 +109,7 @@ footer a { color: rgba(255,255,255,0.8); }
 /* TABLET */
 @media (min-width: 768px) {
   .cards-grid { grid-template-columns: 1fr 1fr; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
   .contact-details-row { flex-direction: row; }
-  .testimonials-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 /* DESKTOP */
@@ -135,4 +125,5 @@ h1, h2, h3, h4, h5, h6, .brand-name, .stat-number { font-family: 'Montserrat', s
 .booking-section { background: #f7f7f7; }
 .booking-section .container { text-align: center; }
 .booking-button { margin-top: 1rem; }
+.booking-provider-note { margin-top: 0.75rem; font-size: 0.95rem; opacity: 0.8; }
 [data-sitehub-booking-widget] { max-width: 760px; min-height: 280px; margin: 2rem auto 0; border: 1px solid #e5e7eb; border-radius: var(--border-radius); background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
