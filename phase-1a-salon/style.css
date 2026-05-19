@@ -7,7 +7,7 @@
   --font-body: 'Source Sans 3', sans-serif;
   --section-padding: 80px 20px;
   --max-width: 1100px;
-  --border-radius: 20px;
+  --border-radius: 16px;
 }
 
 /* Reset */
@@ -16,7 +16,7 @@ html { overflow-x: hidden; }
 body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 
-/* Base — CRITICAL: font-family must be applied to ALL text elements explicitly */
+/* Base */
 body { font-family: var(--font-body); font-size: 15px; line-height: 1.65; color: #333; }
 p, li, a, span, label, input, textarea, button { font-family: var(--font-body); }
 p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 0.75rem; }
@@ -25,14 +25,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
 /* Container */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
 
-/* NAV - CRITICAL: hamburger hidden on desktop, links visible on desktop */
+/* NAV */
 header { position: sticky; top: 0; z-index: 1000; background: var(--color-primary); }
 header .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 20px;
   display: flex !important; justify-content: space-between; align-items: center; min-height: 70px; }
 header img.logo { max-height: 50px; width: auto; filter: var(--logo-filter); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand-name { color: var(--nav-fg); font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; white-space: nowrap; letter-spacing: 0.01em; }
-/* Desktop nav — MUST be horizontal flex row; do NOT override these rules */
 nav { display: flex; align-items: center; }
 nav #nav-links { display: flex !important; flex-direction: row !important; list-style: none !important; gap: 30px; padding: 0; margin: 0; background: transparent !important; position: static !important; }
 nav #nav-links li { padding: 0; border: none; }
@@ -47,12 +46,12 @@ nav #nav-links a:hover { opacity: 0.8; }
 #hero .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 20px; }
 #hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem; }
 #hero p { font-size: clamp(0.95rem, 1.8vw, 1.15rem); margin-bottom: 2rem; }
-.cta-button { display: inline-block; background: transparent; color: var(--color-secondary);
-  padding: 14px 32px; border-radius: var(--border-radius); font-weight: 600; text-decoration: none;
-  border: 2px solid var(--color-secondary); transition: transform 0.2s, box-shadow 0.2s; }
-.cta-button:hover { background: var(--color-secondary); color: white; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+.cta-button { display: inline-block; background: var(--color-secondary); color: white;
+  padding: 14px 32px; border-radius: 50px; font-weight: 600; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s; }
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
 
-/* SECTIONS — alternating backgrounds, centered headings */
+/* SECTIONS */
 section { padding: var(--section-padding); }
 section h2 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); margin-bottom: 1.5rem; color: var(--color-primary); text-align: center; }
 section h2::after { content: ''; display: block; width: 48px; height: 3px; background: var(--color-primary); margin: 10px auto 0 auto; border-radius: 2px; }
@@ -60,14 +59,13 @@ section > p:first-of-type { text-align: center; max-width: 700px; margin-left: a
 #about { background: #fff; }
 #offerings { background: #f7f7f7; }
 #contact { background: #fff; }
-/* Center all section body text */
 #about p, #about li { text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; }
 #offerings .container > p { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
 #contact .contact-details-row, #contact > .container > p { text-align: center; }
 
 /* CARDS */
 .cards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 2rem; text-align: center; }
-.card { background: white; padding: 28px; border-radius: var(--border-radius); border: 1px solid #e0e0e0;
+.card { background: white; padding: 28px; border-radius: var(--border-radius); border-top: 4px solid var(--color-primary);
   box-shadow: 0 2px 12px rgba(0,0,0,0.07); transition: transform 0.3s, box-shadow 0.3s; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
 .card-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(0,0,0,0.06);
@@ -93,7 +91,7 @@ section > p:first-of-type { text-align: center; max-width: 700px; margin-left: a
 footer { background: var(--color-primary); color: white; text-align: center; padding: 24px 20px; }
 footer a { color: rgba(255,255,255,0.8); }
 
-/* MOBILE — optimised for touch devices */
+/* MOBILE */
 @media (max-width: 767px) {
   #hamburger { display: block !important; }
   nav #nav-links { display: none !important; flex-direction: column !important; gap: 0 !important; position: absolute !important;
@@ -109,6 +107,8 @@ footer a { color: rgba(255,255,255,0.8); }
   .cards-grid { grid-template-columns: 1fr; gap: 16px; }
   .card { padding: 20px; }
   .contact-details-row { flex-direction: column; align-items: center; gap: 16px; }
+  .about-grid { grid-template-columns: 1fr; }
+
   .cta-button { padding: 14px 28px; font-size: 1rem; min-height: 48px; }
   .hero-split { grid-template-columns: 1fr; }
   .hero-split-text { padding: 40px 20px; min-height: 50vh; }
@@ -130,17 +130,25 @@ footer a { color: rgba(255,255,255,0.8); }
   .cards-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }
 
-.hero-split { display:grid; grid-template-columns:1fr 1fr; min-height:100vh; }
-.hero-split-text { background:var(--color-primary); color:white; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:60px 40px; }
-.hero-split-image { background-image:url('hero-800x400.jpg'); background-size:cover; background-position:center; }
+/* MANDATORY CREATIVE EXTENSIONS */
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+.hero-split-text { background: var(--color-primary); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px; }
+.hero-split-image { background-image: url('hero-800x400.jpg'); background-size: cover; background-position: center; }
 /* ── SiteHub font enforcement (post-processed) ── */
 body, p, li, a, span, div, button, input, textarea, label, select, td, th, blockquote, figcaption, nav, ul, ol, dl, dt, dd, address, small, strong, em, b, footer, header, main, section, article, aside, figure, details, summary { font-family: 'Source Sans 3', sans-serif !important; }
 h1, h2, h3, h4, h5, h6, .brand-name, .stat-number { font-family: 'Lora', serif !important; }
 
 
 /* BOOKING COMPONENT */
-.booking-section { background: #f7f7f7; }
-.booking-section .container { text-align: center; }
-.booking-button { margin-top: 1rem; }
-.booking-provider-note { margin-top: 0.75rem; font-size: 0.95rem; opacity: 0.8; }
-[data-sitehub-booking-widget] { max-width: 760px; min-height: 280px; margin: 2rem auto 0; border: 1px solid #e5e7eb; border-radius: var(--border-radius); background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.booking-section { background: color-mix(in srgb, var(--primary-color, #0ea5e9) 7%, #ffffff); }
+.booking-panel { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr); gap: 2rem; align-items: center; text-align: left; }
+.booking-kicker { margin: 0 0 0.6rem; color: var(--primary-color, #0ea5e9); font-size: 0.78rem; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+.booking-copy > p:not(.booking-kicker) { max-width: 64ch; }
+.booking-highlights { display: grid; gap: 0.65rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.booking-highlights li { position: relative; padding-left: 1.55rem; color: inherit; opacity: 0.9; }
+.booking-highlights li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 0.55rem; height: 0.55rem; border-radius: 999px; background: var(--primary-color, #0ea5e9); }
+.booking-action-card { border: 1px solid rgba(15, 23, 42, 0.1); border-radius: min(var(--border-radius, 8px), 8px); background: rgba(255, 255, 255, 0.86); padding: 1.4rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+.booking-button { width: 100%; justify-content: center; text-align: center; }
+.booking-provider-note { margin: 0.85rem 0 0; font-size: 0.92rem; line-height: 1.5; opacity: 0.78; }
+[data-sitehub-booking-widget] { max-width: 760px; min-height: 280px; margin: 0; border: 1px solid #e5e7eb; border-radius: min(var(--border-radius, 8px), 8px); background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+@media (max-width: 760px) { .booking-panel { grid-template-columns: 1fr; gap: 1.25rem; } .booking-action-card { padding: 1.1rem; } }
