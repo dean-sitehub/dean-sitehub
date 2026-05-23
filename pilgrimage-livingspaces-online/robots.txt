@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sitehub.co.za/pilgrimage-livingspaces-online/sitemap.xml
