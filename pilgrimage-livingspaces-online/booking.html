@@ -31,48 +31,48 @@
   
   
   
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
   <header>
     <div class="nav-inner">
-      <a href="index.html" class="brand"><img src="../logo.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
+      <a href="index.html" class="brand"><img src="logo.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
       <nav>
         <ul id="nav-links">
           <li><a href="index.html#about">About Us</a></li>
           <li><a href="index.html#offerings">Our Products</a></li>
-          <li><a href="index.html#enquiry">Enquiries</a></li>
+          <li><a href="booking.html">Enquiries</a></li>
           <li><a href="index.html#contact">Contact Us</a></li>
         </ul>
-        <button id="hamburger" aria-label="Menu">☰</button>
       </nav>
+      <button id="hamburger" aria-label="Menu">☰</button>
     </div>
   </header>
-  <section id="enquiry">
-    <h2>Enquire Now</h2>
-    <p>Interested in our products? Send us your queries and our team will get back to you promptly.</p>
-    <div class="form-wrapper" style="width:100%;max-width:700px;margin:2rem auto 0;"><iframe aria-label='Client Enquiry Form' frameborder="0" scrolling="no" style="height:800px;width:100%;border:none;display:block;" src='https://forms.zohopublic.com/sitehubsystems1/form/EnquiryForm/formperma/FVnoiN1nra9NMA76DLjD11ayx0EPm-w6KW14YYL22RI?zid=ZOHO_SITE_ID_PLACEHOLDER'></iframe></div>
-  </section>
-  <footer>
-    © <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a>
-  </footer>
+  <main>
+    <section id="enquiry" class="booking-page-section">
+      <div class="container">
+        <p class="booking-kicker">Enquiries</p>
+        <h1>Ask about availability</h1>
+        <p class="booking-page-intro">Ask about availability, quantities, or collection options and the team will follow up.</p>
+        <div class="booking-panel">
+          <div class="booking-copy">
+            <ul class="booking-highlights"><li>Ask about stock</li><li>Request product details</li><li>Confirm collection or delivery</li></ul>
+          </div>
+          <div class="booking-action-card">
+            <a class="cta-button booking-button" href="https://app.sitehub.co.za/book/8555593b-1ed2-4833-8148-82bac739fd4a" target="_blank" rel="noopener">Enquire Now</a>
+            <p class="booking-provider-note">This opens the SiteHub booking page in a new tab.</p>
+            <a class="booking-back-link" href="index.html">Back to website</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a></footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('hamburger').addEventListener('click', function() {
-      document.getElementById('nav-links').classList.toggle('open');
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) hamburger.addEventListener('click', function() { navLinks.classList.toggle('open'); });
   </script>
 </body>
 </html>
