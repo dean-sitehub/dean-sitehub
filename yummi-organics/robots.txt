@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dean-sitehub.github.io/dean-sitehub/yummi-organics/sitemap.xml
