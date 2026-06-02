@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://sitehub.co.za/pilgrimage-livingspaces-online/sitemap.xml
+Sitemap: https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/sitemap.xml
