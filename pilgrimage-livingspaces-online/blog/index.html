@@ -52,14 +52,10 @@
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Blog",
-    "url": "https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/blog/index.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Pilgrimage Livingspaces online store"
-    }
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Blog",
+    "url":"https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/blog/index.html"
   }
   </script>
 </head>
@@ -67,7 +63,7 @@
   <header class="site-header">
     <div class="nav-inner">
       <a href="../index.html" class="brand"><img src="../logo.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
-      <nav class="primary-nav">
+      <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../booking.html">Book</a></li>
@@ -80,38 +76,51 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <section class="section page-hero compact-hero">
-      <div class="container">
-        <h1 class="page-title">Blog</h1>
-        <p class="page-intro">Thoughtful reading for customers who care about handcrafted interiors, layered rooms and choosing pieces that feel meaningful in daily life.</p>
-        <p><a class="btn btn-secondary" href="../index.html">Back to Home</a></p>
+    <section class="section page-hero page-hero-compact">
+      <div class="container narrow">
+        <p class="eyebrow">Editorial notes from the store</p>
+        <h1 class="section-heading">Blog</h1>
+        <p>Explore helpful articles from Pilgrimage Livingspaces online store on artisan craft, choosing pieces for your home and creating living spaces that feel layered, warm and intentional. These posts are written for customers who want more confidence when selecting handcrafted furniture, decor and textiles.</p>
+        <p><a href="../index.html" class="text-link">Return to the home page</a></p>
       </div>
     </section>
-    <section class="section">
+
+    <section class="section alt-surface">
       <div class="container blog-grid">
         <article class="card blog-card">
-          <img src="../about.jpg" alt="Detailed handcrafted furniture and textiles in a curated interior setting" class="blog-thumb">
+          <img src="../about.jpg" alt="Handcrafted furniture and decor arranged in a curated interior setting" class="blog-thumb">
           <h2>Artisan skills passed down from generation to generation</h2>
-          <p>Discover why handmade detail matters in the home and how inherited craft traditions create furniture, decor and textiles with real presence.</p>
-          <a class="btn" href="artisan-skills-passed-down-from-generation-to-generation.html">Read Artisan skills passed down from generation to generation</a>
+          <p>Learn why inherited craft techniques matter when you are choosing furniture, decor and textiles for a home that should feel distinctive rather than standardised.</p>
+          <a href="artisan-skills-passed-down-from-generation-to-generation.html" class="btn">Read Artisan skills passed down from generation to generation</a>
         </article>
         <article class="card blog-card">
-          <img src="../hero-800x400.jpg" alt="Curated furniture and decor arranged as a warm living space" class="blog-thumb">
+          <img src="../hero-800x400.jpg" alt="Warm living space featuring handcrafted furniture with natural textures" class="blog-thumb">
           <h2>How to choose the right service</h2>
-          <p>A practical guide to deciding whether to start with furniture, finishing decor or soft furnishings when shaping a room through Pilgrimage Livingspaces online store.</p>
-          <a class="btn" href="how-to-choose-the-right-service.html">Read How to choose the right service</a>
+          <p>A practical guide to deciding whether you need a statement furniture piece, finishing decor or soft furnishings to bring balance to your living space.</p>
+          <a href="how-to-choose-the-right-service.html" class="btn">Read How to choose the right service</a>
         </article>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="../shop/index.html">Shop Now</a>
-        <a href="../booking.html">Enquire Now</a>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">Pilgrimage Livingspaces online store</p>
+        <p>Handcrafted furniture, decor and textiles curated for soulful living spaces.</p>
+      </div>
+      <div>
+        <p class="footer-title">Explore</p>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../booking.html">Book</a></li>
+          <li><a href="../shop/index.html">Shop Now</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../products-services.html">Products &amp; Services</a></li>
+          <li><a href="../shopping-store-faqs.html">Shopping &amp; Store FAQs</a></li>
+        </ul>
       </div>
     </div>
   </footer>
