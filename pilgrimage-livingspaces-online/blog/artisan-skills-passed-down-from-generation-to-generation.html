@@ -58,15 +58,12 @@
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Artisan skills passed down from generation to generation",
-    "mainEntityOfPage": "https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/blog/artisan-skills-passed-down-from-generation-to-generation.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Pilgrimage Livingspaces online store"
-    },
-    "image": "https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/about.jpg"
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"Artisan skills passed down from generation to generation",
+    "mainEntityOfPage":"https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/blog/artisan-skills-passed-down-from-generation-to-generation.html",
+    "image":"https://dean-sitehub.github.io/dean-sitehub/pilgrimage-livingspaces-online/about.jpg",
+    "publisher":{"@type":"Organization","name":"Pilgrimage Livingspaces online store"}
   }
   </script>
 </head>
@@ -74,7 +71,7 @@
   <header class="site-header">
     <div class="nav-inner">
       <a href="../index.html" class="brand"><img src="../logo.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
-      <nav class="primary-nav">
+      <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../booking.html">Book</a></li>
@@ -87,33 +84,46 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <article class="section article-wrap">
-      <div class="container article-container">
-        <p class="article-nav"><a href="index.html">Back to Blog</a> · <a href="../index.html">Return to Home</a></p>
-        <h1 class="page-title">Artisan skills passed down from generation to generation</h1>
-        <img src="../about.jpg" alt="Handcrafted furniture and textile details displayed in a curated room" class="article-image">
-        <p>When a home contains handcrafted furniture or textiles, the difference is often felt before it is explained. A room gains depth because the object inside it carries signs of human attention: shaping, joining, finishing and material sensitivity that do not read as anonymous. Pilgrimage Livingspaces online store is built around that kind of presence, bringing together pieces with soul and a story rather than flat decorative filler.</p>
-        <h2>Why craft matters in a living space</h2>
-        <p>Artisan work often creates subtleties that customers notice over time. The surface may feel richer, the proportions more considered, or the decorative details more grounded because they come from a practice shaped through repetition and care. For customers furnishing a home, this matters because the goal is not only to fill a room, but to create a space that keeps rewarding attention.</p>
+    <article class="section article-layout">
+      <div class="container narrow article-shell">
+        <p class="eyebrow">Blog article</p>
+        <h1 class="section-heading">Artisan skills passed down from generation to generation</h1>
+        <img src="../about.jpg" alt="Curated handcrafted furniture and homeware in a warm showroom setting" class="article-image">
+        <p>When people talk about a piece having soul, they are often responding to the evidence of skilled hands behind it. Artisan work carries signs of patience, repetition and care that cannot be separated from the final object. In a store like Pilgrimage Livingspaces online store, that matters because the furniture, decor and textiles are valued not only for how they fill a room, but for how they make the room feel.</p>
+        <h2>Why inherited craft still matters</h2>
+        <p>Skills passed from one generation to the next tend to preserve methods of shaping, finishing and detailing that give a piece its character. Those methods often result in objects that feel grounded, textured and visually richer than mass-produced alternatives. For a customer, that means the home is furnished with pieces that can hold attention quietly over time rather than relying on trend or novelty.</p>
         <h2>How this changes the way you shop</h2>
-        <p>Choosing handcrafted pieces encourages a slower, more intentional approach. Instead of asking only whether something matches, customers begin asking whether it brings warmth, character and a sense of permanence. That is where a store like Pilgrimage Livingspaces online store becomes useful: it curates furniture, decor and textiles that can work together as a lived-in environment rather than isolated purchases.</p>
+        <p>Buying artisan-led furniture or homeware usually asks you to look more closely at proportion, finish and atmosphere. Instead of asking only whether an item fits a gap, it helps to ask what it contributes to the story of the room. A handcrafted table, decorative object or textile layer can set the tone for an entire living space when chosen with that wider view in mind.</p>
         <h2>Practical takeaway</h2>
-        <p>If you are deciding between several options, look for the piece that adds the most feeling to the room, not just the one that fills the empty spot. In many homes, one well-chosen handcrafted item can set the tone for everything that follows.</p>
-        <div class="button-row">
-          <a class="cta-button" href="../shop/index.html">Shop Now</a>
-          <a class="btn btn-secondary" href="../booking.html">Enquire Now</a>
+        <p>If you are choosing between a quick purchase and a crafted piece, focus on what you want the room to feel like in daily life. Pieces shaped by inherited skill often reward that slower way of choosing because they bring texture, warmth and emotional depth into the home. That is especially valuable when you want a space to feel curated rather than assembled in haste.</p>
+        <div class="hero-actions centered-actions">
+          <a class="btn" href="../booking.html">Enquire Now</a>
+          <a class="btn btn-secondary" href="../shop/index.html">Shop Now</a>
+          <a class="btn btn-outline" href="index.html">Back to Blog</a>
+          <a class="btn btn-outline" href="../index.html">Back to Home</a>
         </div>
       </div>
     </article>
   </main>
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="index.html">Blog</a>
-        <a href="../index.html">Home</a>
-        <a href="../shop/index.html">Shop</a>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">Pilgrimage Livingspaces online store</p>
+        <p>Handcrafted furniture, decor and textiles curated for soulful living spaces.</p>
+      </div>
+      <div>
+        <p class="footer-title">Explore</p>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../booking.html">Book</a></li>
+          <li><a href="../shop/index.html">Shop Now</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../products-services.html">Products &amp; Services</a></li>
+          <li><a href="../shopping-store-faqs.html">Shopping &amp; Store FAQs</a></li>
+        </ul>
       </div>
     </div>
   </footer>
