@@ -185,3 +185,22 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 
 /* ── SiteHub editorial hero enhancement (post-processed) ── */
 #hero.hero-split{position:relative;min-height:calc(100svh - 84px);margin-top:0 !important;padding-top:0 !important;display:grid !important;grid-template-columns:minmax(320px,.92fr) minmax(320px,1.08fr);align-items:stretch;background:none !important;color:white;text-align:left}#hero.hero-split::before{display:none !important}#hero.hero-split .hero-split-text{position:relative;display:flex;align-items:stretch;justify-content:flex-start;padding-top:0 !important;background:linear-gradient(155deg,color-mix(in srgb,var(--color-primary,#0f172a) 88%,#000) 0%,color-mix(in srgb,var(--color-primary,#0f172a) 70%,var(--color-secondary,#c08457) 30%) 100%);overflow:hidden}#hero.hero-split .hero-split-text::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top left,rgba(255,255,255,.14),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.06),transparent 35%)}#hero.hero-split .hero-content{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-content:center;max-width:560px;padding:clamp(18px,3vw,40px) clamp(24px,4vw,52px) clamp(24px,4vw,46px);text-align:left}#hero.hero-split h1{width:100%;font-size:clamp(2.15rem,4vw,4rem);line-height:.94;margin:0 0 .75rem;text-wrap:balance}#hero.hero-split p{width:100%;font-size:clamp(.98rem,1.3vw,1.08rem);line-height:1.58;max-width:31rem;margin:0 0 1.15rem;color:rgba(255,255,255,.86)}#hero.hero-split .cta-button{margin:0 .65rem .65rem 0;padding:12px 22px;box-shadow:0 14px 28px rgba(0,0,0,.18)}#hero.hero-split .hero-split-image{position:relative;min-height:100%;margin-top:0 !important;padding-top:0 !important;background-image:linear-gradient(180deg,rgba(15,23,42,.02),rgba(15,23,42,.18)),url('hero-800x400.jpg?v=1780487342784');background-size:cover;background-position:center}#hero.hero-split .hero-split-image::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.18) 0%,transparent 22%,transparent 100%),radial-gradient(circle at center,transparent 45%,rgba(15,23,42,.18) 100%)}@media(max-width:860px){#hero.hero-split{grid-template-columns:1fr;min-height:auto}#hero.hero-split .hero-split-text{order:1;min-height:auto}#hero.hero-split .hero-split-image{order:2;min-height:36vh}#hero.hero-split .hero-content{text-align:center;justify-content:center;padding:24px 22px 22px}#hero.hero-split .cta-button{margin:0 .5rem .75rem}#hero.hero-split p{margin-left:auto;margin-right:auto}}
+
+
+/* === SITEHUB CUSTOM STYLING === */
+/* Auto-generated from user styling preferences */
+
+:root {
+  --color-primary: #4dadd5 !important;
+  --primary-color: #4dadd5 !important;
+  --primary-blue: #4dadd5 !important;
+  --color-secondary: #ddf3f2 !important;
+  --secondary-color: #ddf3f2 !important;
+  --secondary-blue: #ddf3f2 !important;
+  --font-heading: 'Montserrat', sans-serif !important;
+  --heading-font: 'Montserrat', sans-serif !important;
+  --font-body: 'Open Sans', sans-serif !important;
+  --body-font: 'Open Sans', sans-serif !important;
+}
+
+/* === END CUSTOM STYLING === */
