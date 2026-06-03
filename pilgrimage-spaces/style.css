@@ -198,16 +198,32 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --secondary-color: #ddf3f2 !important;
   --secondary-blue: #ddf3f2 !important;
   --logo-filter: none !important;
-  --sitehub-logo-max-height: 120px !important;
+  --sitehub-logo-max-height: 80px !important;
   --font-heading: 'Montserrat', sans-serif !important;
   --heading-font: 'Montserrat', sans-serif !important;
   --font-body: 'Open Sans', sans-serif !important;
   --body-font: 'Open Sans', sans-serif !important;
 }
 
+@media (min-width: 768px) {
+#hero.hero-split .hero-split-text { position: relative !important; overflow: hidden !important; }
+#hero.hero-split .hero-split-text .hero-content { position: absolute !important; max-width: none !important; margin: 0 !important; padding: 0 !important; left: 8% !important; top: 10% !important; width: 84.89798852543422% !important; height: 80.69396557630266% !important; min-height: 80.69396557630266% !important; }
+#hero.hero-split .hero-split-text .hero-content .hero-actions { display: contents !important; }
+#hero.hero-split .hero-split-text .hero-content > .eyebrow { position: absolute !important; left: 14% !important; top: 0% !important; width: 72% !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important;  }
+#hero.hero-split .hero-split-text .hero-content > h1 { position: absolute !important; left: 9% !important; top: 14% !important; width: 82% !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important;  }
+#hero.hero-split .hero-split-text .hero-content > p { position: absolute !important; left: 14% !important; top: 50% !important; width: 72% !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important;  }
+#hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button { position: absolute !important; left: 8% !important; top: 70% !important; width: 28% !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
+#hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: absolute !important; left: 64% !important; top: 70% !important; width: 28% !important; text-align: right !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top right !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
+}
+@media (max-width: 767px) {
+#hero.hero-split .hero-split-text .hero-content, #hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > p, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: static !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; min-height: 0 !important; text-align: left !important; }
+#hero.hero-split .hero-split-text .hero-content .hero-actions { display: flex !important; flex-wrap: wrap !important; gap: 12px !important; }
+}
+
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
