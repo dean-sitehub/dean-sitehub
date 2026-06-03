@@ -2,38 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/booking.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/faq.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/products-services.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/shopping-store-faqs.html</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/index.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/how-the-products-are-manufactured-using-techniques-passed-do.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/the-beauty-of-creating-products-using-techniques-passed-from.html</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/how-to-choose-the-right-service.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/shop/index.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
