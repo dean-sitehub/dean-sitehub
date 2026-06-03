@@ -37,63 +37,114 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-inner">
-      <a href="index.html" class="brand"><img src="logo-light.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <ul id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="booking.html">Book</a></li>
-          <li><a href="shop/index.html">Shop Now</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="products-services.html">Products &amp; Services</a></li>
-          <li><a href="shopping-store-faqs.html">Shopping &amp; Store FAQs</a></li>
-        </ul>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><img src="logo-light.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#offerings">Our Products</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="shop/index.html">Shop Now</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li class="nav-more">
+          <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="sub-nav">
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="products-services.html">Products & Services</a></li>
+            <li><a href="shopping-store-faqs.html">Shopping & Store FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
         <button id="hamburger" aria-label="Menu">☰</button>
-      </nav>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="hero" class="hero-split hero-short">
+    <div class="hero-split-text"><div class="hero-content"><p class="eyebrow">Products &amp; Services</p><h1>Crafted categories for layered living</h1><p>Pilgrimage Livingspaces online store brings together furniture, decor and textiles that help customers build rooms with texture, warmth and individuality.</p><a href="shop/index.html" class="cta-button">Shop Now</a></div></div>
+    <div class="hero-split-image" aria-hidden="true"></div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container narrow">
+      <h2>Products &amp; Services</h2>
+      <p>Pilgrimage Livingspaces online store is built around a clear and focused offering: handcrafted furniture, decor and homeware, and textiles and soft furnishings. Rather than overwhelming shoppers with disconnected stock, the range is presented as a collection of categories that belong together and support a more intentional way of furnishing a home.</p>
+      <p>The main value of the range lies in character. Customers who are drawn to handcrafted artisan work, pieces with soul and a story, and living spaces that feel curated instead of generic will find that these categories speak to a slower, more considered style of shopping.</p>
+      <p>As a furniture store, Pilgrimage Livingspaces also offers the practical benefit of having these categories connected in one place. That means it is easier to move from a major furniture piece to decorative accents and then to textiles that soften and complete the room, all while keeping a consistent visual mood.</p>
     </div>
-  </header>
-  <main>
-    <section class="section page-hero compact-hero">
-      <div class="container">
-        <span class="eyebrow">Furniture, decor and textiles</span>
-        <h1 class="section-heading">Products &amp; Services</h1>
-        <p class="lead">Pilgrimage Livingspaces online store is focused on curated living spaces built through handcrafted furniture, decor and homeware, and textiles with depth and character.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container narrow-stack">
-        <div class="card info-panel">
-          <h2 class="section-heading left">Handcrafted furniture</h2>
-          <p>This category is for customers looking for furniture that does more than fill a practical need. Pilgrimage’s handcrafted furniture offering is aligned with artisan work and story-rich pieces, making it especially suited to interiors that need warmth, individuality and visible craftsmanship. It is a strong choice when you want larger pieces to set the tone of a room instead of disappearing into the background.</p>
+  </section>
+
+  <section id="offerings" class="section">
+    <div class="container">
+      <h2>Main categories</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-couch"></i></div>
+          <h3>Handcrafted furniture</h3>
+          <p>This category includes furniture selected for craftsmanship, natural material appeal and visual presence. It suits customers who want their interiors to begin with a piece that feels substantial, warm and memorable rather than purely practical.</p>
         </div>
-        <div class="card info-panel">
-          <h2 class="section-heading left">Decor and homeware</h2>
-          <p>Decor and homeware help complete the room and introduce layers that make a space feel lived in. This offering suits customers who want expressive but thoughtful finishing touches across shelves, surfaces and everyday living areas. The emphasis is on pieces that contribute mood, texture and character rather than generic decorative filler.</p>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-vase"></i></div>
+          <h3>Decor and homeware</h3>
+          <p>Decor and homeware bring dimension to the everyday parts of a room. These pieces help customers style surfaces, complete corners and create a home that feels personal, collected and comfortably lived in.</p>
         </div>
-        <div class="card info-panel">
-          <h2 class="section-heading left">Textiles and soft furnishings</h2>
-          <p>Textiles and soft furnishings bring comfort, softness and visual balance to the harder surfaces found in furniture-led interiors. This category is useful for anyone wanting to enrich a room with fabric, depth and more tactile comfort. It is especially effective when you want to tie furniture and decor together into a more complete, layered space.</p>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-rug"></i></div>
+          <h3>Textiles and soft furnishings</h3>
+          <p>Textiles add softness, rhythm and tactile richness to a space. For customers refining the comfort level of a home, this category supports layering and helps tie furniture and decor together in a more natural way.</p>
         </div>
-        <div class="card info-panel">
-          <h2 class="section-heading left">Furniture store guidance</h2>
-          <p>As a furniture store, Pilgrimage Livingspaces online store offers customers a clear place to start when they are shaping a room or refreshing part of the home. The business is best understood as a curated retail destination rather than a broad, impersonal warehouse of unrelated stock. Customers can enquire directly to discuss categories, ordering and how best to approach their purchase.</p>
-        </div>
-        <div class="card info-panel">
-          <h2 class="section-heading left">Ordering, delivery and additional help</h2>
-          <p>The supplied business information confirms the product categories above and the store context, but it does not confirm extra services such as gift wrapping, custom orders or layby. For that reason, the safest and most useful route is to contact Pilgrimage directly with your requirements. If you need help deciding what to buy or want to understand how ordering will work for your area, use the enquiry page or contact details below.</p>
-          <div class="hero-actions left-actions">
-            <a href="booking.html" class="cta-button">Enquire Now</a>
-            <a href="shop/index.html" class="btn btn-secondary">Shop Now</a>
-          </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-store"></i></div>
+          <h3>Furniture store support</h3>
+          <p>As a dedicated furniture store, Pilgrimage Livingspaces offers a practical route for browsing, comparing categories and making direct enquiries. Customers can explore online, contact the store for assistance and move toward purchase with more clarity.</p>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer">© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
-  </script>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container narrow">
+      <h2>Shopping guidance</h2>
+      <p>Pilgrimage Livingspaces online store is especially helpful for customers who are furnishing with intention rather than impulse. If you already know the feeling you want your space to have, the collection offers a strong starting point across furniture, decorative pieces and softer finishing layers.</p>
+      <p>Where more detail is needed, the best next step is to enquire directly. That is useful for customers comparing categories, checking which type of piece may suit a specific room or asking practical questions about ordering and delivery.</p>
+      <p><a href="booking.html" class="cta-button">Enquire Now</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch to ask about product categories, online shopping or finding the right living piece for your home.</p>
+      <div class="contact-details-row">
+        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>ACT Logistics, 51B Junction Street Parow Industrial, Ravensmead, Cape Town, 7493, South Africa</span></div>
+        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><a href="mailto:Deankann@gmail.com">Deankann@gmail.com</a></div>
+        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:0785320831">078 532 0831</a></div>
+      </div>
+      <div class="social-links">
+        <a class="social-circle" href="https://www.facebook.com/pilgrimagespaces/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-circle" href="https://www.instagram.com/pilgrimagespaces/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 </body>
 </html>
