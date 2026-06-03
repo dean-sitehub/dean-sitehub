@@ -42,57 +42,105 @@
       <a href="index.html" class="brand"><img src="logo-light.png" alt="Pilgrimage Livingspaces online store logo" class="logo"><span class="brand-name">Pilgrimage Livingspaces online store</span></a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="booking.html">Book</a></li>
-          <li><a href="shop/index.html">Shop Now</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="products-services.html">Products &amp; Services</a></li>
-          <li><a href="shopping-store-faqs.html">Shopping &amp; Store FAQs</a></li>
-        </ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#offerings">Our Products</a></li>
+        <li><a href="booking.html">Book</a></li>
+        <li><a href="shop/index.html">Shop Now</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li class="nav-more">
+          <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="sub-nav">
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="products-services.html">Products & Services</a></li>
+            <li><a href="shopping-store-faqs.html">Shopping & Store FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
         <button id="hamburger" aria-label="Menu">☰</button>
       </nav>
     </div>
   </header>
+
   <main>
-    <section class="section page-hero compact-hero">
-      <div class="container">
-        <span class="eyebrow">Enquire about our collection</span>
-        <h1 class="section-heading">Enquire Now</h1>
-        <p class="lead">If you have a question about handcrafted furniture, decor and homeware, or textiles and soft furnishings, the best next step is to contact Pilgrimage directly by phone, email or the enquiry form below.</p>
+    <section id="hero" class="hero-split hero-short">
+      <div class="hero-split-text">
+        <div class="hero-content">
+          <p class="eyebrow">Enquire Now</p>
+          <h1>Let us help you find the right piece</h1>
+          <p>Reach out if you need guidance on handcrafted furniture, decor, homeware or textiles. We will point you toward pieces that suit your space and style.</p>
+          <a href="#contact" class="cta-button">Enquire Now</a>
+        </div>
+      </div>
+      <div class="hero-split-image" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>How to enquire</h2>
+        <p>If you have seen something you love, want help choosing between categories or need more detail before ordering, this is the best place to start. Pilgrimage Livingspaces online store focuses on curated living pieces, so enquiries are welcomed when you want a clearer sense of which items will work best in your home.</p>
+        <p>You can contact the store by phone or email for product questions, availability guidance and general shopping support. If you prefer, you can also use the contact form below to send a more detailed message about the room, mood or product type you have in mind.</p>
+        <p>For direct browsing, you can also visit the <a href="shop/index.html">Online Shop</a> or read more on the <a href="products-services.html">Products &amp; Services</a> page before making contact.</p>
       </div>
     </section>
-    <section class="section">
-      <div class="container narrow-stack">
-        <div class="card info-panel">
-          <h2 class="section-heading left">How to enquire</h2>
-          <p>Use this page to start a straightforward conversation about the pieces you are interested in. Whether you are searching for one distinctive item or building a more layered room scheme, an enquiry helps you confirm availability, discuss the type of item you need and get guidance on the best category to explore.</p>
-          <p>Pilgrimage Livingspaces online store is centred on curated living spaces rather than a one-size-fits-all catalogue. That means an enquiry is especially useful if you want help narrowing your choices between furniture, decor and homeware, or soft-furnishing options that suit the mood of your home.</p>
-          <div class="contact-details-row booking-contact-row">
-            <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><a href="mailto:Deankann@gmail.com">Deankann@gmail.com</a></div>
-            <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:0785320831">078 532 0831</a></div>
-            <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>ACT Logistics, 51B Junction Street Parow Industrial, Ravensmead, Cape Town</span></div>
+
+    <section id="offerings" class="section">
+      <div class="container">
+        <h2>What you can ask about</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-chair"></i></div>
+            <h3>Furniture guidance</h3>
+            <p>Ask about handcrafted furniture pieces that can anchor a room with presence and warmth. This is especially useful if you are planning a living space around a statement item and want a cohesive starting point.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-home"></i></div>
+            <h3>Decor selection</h3>
+            <p>Decor and homeware enquiries can help you refine finishing touches and layered accents. If you are styling shelves, tables or a complete room, guidance can make the curation feel more intentional.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-scroll"></i></div>
+            <h3>Textile choices</h3>
+            <p>Textiles and soft furnishings often shape the comfort and mood of a room. Enquire if you are looking to soften an interior or add tactile detail that works with your existing furniture and decor.</p>
           </div>
         </div>
-        <div class="card info-panel">
-          <h2 class="section-heading left">What to include in your message</h2>
-          <ul class="feature-list">
-            <li>The product category you are interested in, such as handcrafted furniture, decor and homeware, or textiles and soft furnishings.</li>
-            <li>The type of room or setting you are furnishing so your enquiry is more specific and useful.</li>
-            <li>Any questions about ordering online, delivery arrangements or how to proceed with a purchase.</li>
-          </ul>
-          <div class="hero-actions left-actions">
-            <a href="mailto:Deankann@gmail.com" class="cta-button">Enquire Now</a>
-            <a href="shop/index.html" class="btn btn-secondary">Shop Now</a>
-          </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Use the details below to send your enquiry directly to Pilgrimage Livingspaces online store.</p>
+        <div class="contact-details-row">
+          <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>ACT Logistics, 51B Junction Street Parow Industrial, Ravensmead, Cape Town, 7493, South Africa</span></div>
+          <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><a href="mailto:Deankann@gmail.com">Deankann@gmail.com</a></div>
+          <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:0785320831">078 532 0831</a></div>
+        </div>
+        <div class="social-links">
+          <a class="social-circle" href="https://www.facebook.com/pilgrimagespaces/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-circle" href="https://www.instagram.com/pilgrimagespaces/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="form-wrapper" style="width:100%;max-width:700px;margin:2rem auto 0;"><iframe aria-label='Client Contact Us' frameborder="0" scrolling="no" style="height:800px;width:100%;border:none;display:block;" src='https://forms.zohopublic.com/sitehubsystems1/form/ContactUs1/formperma/FVnoiN1nra9NMA76DLjD11ayx0EPm-w6KW14YYL22RI?zid=ZOHO_SITE_ID_PLACEHOLDER'></iframe></div>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">© <span id="year"></span> Pilgrimage Livingspaces online store. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a></footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
