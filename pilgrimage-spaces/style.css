@@ -197,10 +197,15 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --color-secondary: #ddf3f2 !important;
   --secondary-color: #ddf3f2 !important;
   --secondary-blue: #ddf3f2 !important;
+  --logo-filter: none !important;
+  --sitehub-logo-max-height: 200px !important;
   --font-heading: 'Montserrat', sans-serif !important;
   --heading-font: 'Montserrat', sans-serif !important;
   --font-body: 'Open Sans', sans-serif !important;
   --body-font: 'Open Sans', sans-serif !important;
 }
 
+header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
+
 /* === END CUSTOM STYLING === */
+
