@@ -47,59 +47,77 @@
   
   
   
-  
   <link rel="stylesheet" href="../index.html#contact" crossorigin="anonymous">
   <link href="../index.html#contact" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Blog","url":"https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/index.html","isPartOf":{"@type":"WebSite","name":"Pilgrimage Spaces","url":"https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog",
+    "url": "https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/blog/index.html"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-inner">
-      <a href="../index.html" class="brand"><span class="brand-name">Pilgrimage Spaces</span></a>
+      <a href="../index.html" class="brand"><img src="../logo.png" alt="Pilgrimage Spaces logo" class="logo"><span class="brand-name">Pilgrimage Spaces</span></a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../booking.html">Book</a></li>
-          <li><a href="index.html">Blog</a></li>
-          <li><a href="../faq.html">FAQ</a></li>
-        </ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li><a href="../index.html#offerings">Our Products</a></li>
+        <li><a href="../booking.html">Book</a></li>
+        <li><a href="../shop/index.html">Shop Now</a></li>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact Us</a></li>
+        <li class="nav-more">
+          <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="sub-nav">
+            <li><a href="../index.html#testimonials">Testimonials</a></li>
+            <li><a href="../index.html#gallery">Gallery</a></li>
+            <li><a href="../products-services.html">Products & Services</a></li>
+            <li><a href="../shopping-store-faqs.html">Shopping & Store FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
         <button id="hamburger" aria-label="Menu">☰</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="section subpage-hero blog-hero">
-      <div class="hero-content">
-        <p class="eyebrow">Editorial guidance</p>
-        <h1>Blog</h1>
-        <p>Thoughtful reading for customers drawn to handcrafted furniture, decor, homeware, and textiles with story and substance.</p>
-        <a href="#blog-list" class="cta-button btn">Read Articles</a>
+    <section id="hero" class="page-hero page-hero-compact">
+      <div class="hero-split hero-split-short">
+        <div class="hero-split-text">
+          <div class="hero-content">
+            <p class="eyebrow">Journal</p>
+            <h1>Blog</h1>
+            <p>Thoughtful reads on craftsmanship, interiors, and choosing pieces with soul for the spaces you live in every day.</p>
+            <a href="../index.html" class="cta-button">Back to Home</a>
+          </div>
+        </div>
+        <div class="hero-split-image" aria-label="Editorial view of handcrafted home interiors"></div>
       </div>
     </section>
 
     <section id="blog-list" class="section">
       <div class="container">
-        <h2 class="section-heading">Latest articles</h2>
-        <p>Explore practical, customer-focused articles designed to help you choose artisan pieces with more confidence and a stronger sense of how they shape a home.</p>
-        <div class="cards-grid blog-cards-grid">
+        <h2>Latest Articles</h2>
+        <div class="cards-grid blog-grid">
           <article class="card blog-card">
-            <div class="card-icon"><i class="fas fa-hammer"></i></div>
-            <h3>How the products are manufactured using techniques passed down from generation to generation</h3>
-            <p>This article explains why inherited making methods matter, what handcrafted character looks like in real furniture and homeware, and how traditional techniques influence the feeling of a finished space.</p>
-            <p><a class="text-link" href="how-the-products-are-manufactured-using-techniques-passed-do.html">Read the article on how products are manufactured</a></p>
+            <img src="../gallery-1.jpg" alt="Carved and handcrafted furniture detail at Pilgrimage Spaces" class="blog-thumb">
+            <h3>The beauty of creating products using techniques passed from generation to generation in India and B</h3>
+            <p>Explore why traditional making methods still matter when choosing handcrafted furniture, textiles, and decor for a home with depth and character.</p>
+            <p><a href="the-beauty-of-creating-products-using-techniques-passed-from.html" class="text-link">Read the article on artisan techniques</a></p>
           </article>
           <article class="card blog-card">
-            <div class="card-icon"><i class="fas fa-compass"></i></div>
+            <img src="../gallery-2.jpg" alt="Layered decor and furniture styling at Pilgrimage Spaces" class="blog-thumb">
             <h3>How to choose the right service</h3>
-            <p>This guide helps customers work out where to begin when selecting handcrafted furniture, decor, or textiles, especially when they want a room to feel curated rather than crowded.</p>
-            <p><a class="text-link" href="how-to-choose-the-right-service.html">Read the guide to choosing the right service</a></p>
+            <p>Learn how to approach a furniture and homeware enquiry so you can get more useful guidance when selecting pieces for your home.</p>
+            <p><a href="how-to-choose-the-right-service.html" class="text-link">Read the guide to choosing the right service</a></p>
           </article>
-        </div>
-        <div class="page-links-inline centered-links">
-          <a href="../index.html" class="text-link">Back to home</a>
-          <a href="../booking.html" class="text-link">Make an enquiry</a>
         </div>
       </div>
     </section>
