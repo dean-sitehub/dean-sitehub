@@ -16,8 +16,8 @@
   <meta name="twitter:image" content="https://dean-sitehub.github.io/dean-sitehub/pilgrimage-spaces/hero-800x400.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Pilgrimage Spaces — Furniture Store</title>
-  <meta name="description" content="Pilgrimage Spaces is a Cape Town furniture store offering handcrafted furniture, decor, homeware and textiles with soul, story and artisanal detail.">
+  <title>Pilgrimage Spaces</title>
+  <meta name="description" content="Pilgrimage Spaces is a Cape Town furniture store offering handcrafted furniture, decor, homeware and textiles with soul, story and artisanal detail." />
   
   
   
@@ -56,6 +56,77 @@
   ]
 }
 </script>
+<style>
+/* SiteHub rich text alignment + about heading defaults */
+.ql-align-center { text-align: center !important; }
+.ql-align-right { text-align: right !important; }
+.ql-align-justify { text-align: justify !important; }
+#about h2, #about h3 { text-align: center; }
+#about .ql-align-left { text-align: left !important; }
+#about .ql-align-center { text-align: center !important; }
+#about .ql-align-right { text-align: right !important; }
+#about .ql-align-justify { text-align: justify !important; }
+.sitehub-section-intro { max-width: 720px; margin: -0.75rem auto 2rem auto; text-align: center; line-height: 1.7; }
+
+/* Service card additional fields */
+.service-item .service-price {
+  display: block;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.service-item .service-duration {
+  display: block;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--dark-grey);
+  margin: 0.5rem 0;
+}
+
+.service-item .service-features {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto 0 auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.service-item .service-features li {
+  padding: 0.3rem 0;
+  padding-left: 1.6rem;
+  position: relative;
+  font-size: 0.95em;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.service-item .service-features li:before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.service-item .service-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius-soft);
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 2rem; }
+.gallery-item img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--border-radius, 8px); display: block; }
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -64,16 +135,16 @@
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offerings">Products</a></li>
+        <li><a href="#about">About Pilgrimage Spaces</a></li>
+        <li><a href="#offerings">Our Products</a></li>
         <li><a href="booking.html">Book</a></li>
         <li><a href="shop/index.html">Shop Now</a></li>
         <li><a href="blog/index.html">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Contact Us</a></li>
         <li class="nav-more">
           <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
           <ul class="sub-nav">
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#testimonials">What Our Clients Say</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="products-services.html">Products & Services</a></li>
             <li><a href="shopping-store-faqs.html">Shopping & Store FAQs</a></li>
@@ -93,7 +164,7 @@
           <h1>Pilgrimage Spaces</h1>
           <p>Piece with history</p>
           <div class="hero-actions">
-            <a href="#contact" class="cta-button">Get In Touch</a>
+            <a href="#contact" class="cta-button">Contact Us</a>
             <a href="shop/index.html" class="btn btn-secondary">Shop Now</a>
           </div>
         </div>
@@ -104,53 +175,60 @@
     <section id="about" class="section">
       <div class="container">
         <h2>About Pilgrimage Spaces</h2>
-        <p>Pilgrimage Spaces is a furniture store for people who want a home to feel layered, collected and deeply personal. The collection centres on handcrafted furniture, decor and homeware, and textiles that bring warmth and character into everyday rooms. Rather than treating interiors as disposable, the business focuses on pieces that feel considered and lived with from the moment they arrive.</p>
-        <p>Its point of view is rooted in artisan work and the beauty of objects that carry a visible human touch. Grain, weave, carving and finish matter here because those details are what give a room emotional depth. The result is a curated living-space approach where statement furniture and softer finishing pieces work together instead of competing for attention.</p>
-        <p>Customers come to Pilgrimage Spaces when they want more than a standard retail purchase. They are often looking for a table, cabinet, textile or decorative object that changes the feel of a room and tells a richer story over time. The promise is simple: thoughtful pieces with soul, warm service, and a collection chosen for people who value craft as much as comfort.</p>
-        <img src="about.jpg?v=1780487342784" alt="Pilgrimage Spaces team" class="about-photo">
-      </div>
+<p>Pilgrimage Spaces is a furniture store for people who want a home to feel layered, collected and deeply personal. The collection centres on handcrafted furniture, decor and homeware, and textiles that bring warmth and character into everyday rooms. Rather than treating interiors as disposable, the business focuses on pieces that feel considered and lived with from the moment they arrive.</p><p>Its point of view is rooted in artisan work and the beauty of objects that carry a visible human touch. Grain, weave, carving and finish matter here because those details are what give a room emotional depth. The result is a curated living-space approach where statement furniture and softer finishing pieces work together instead of competing for attention.</p><p>Customers come to Pilgrimage Spaces when they want more than a standard retail purchase. They are often looking for a table, cabinet, textile or decorative object that changes the feel of a room and tells a richer story over time. The promise is simple: thoughtful pieces with soul, warm service, and a collection chosen for people who value craft as much as comfort.</p>
+                    <img src="about.jpg?v=1780487342784" alt="Pilgrimage Spaces team" class="about-photo">
+                </div>
     </section>
 
     <section id="offerings" class="section">
       <div class="container">
         <h2>Our Products</h2>
-        <p>Explore handcrafted furniture, decor, homeware, textiles and soft furnishings selected for tactile detail, layered living spaces and a sense of story in every room.</p>
+        <p class="sitehub-section-intro">Explore handcrafted furniture, decor, homeware, textiles and soft furnishings selected for tactile detail, layered living spaces and a sense of story in every room.</p>
         <div class="cards-grid">
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-couch"></i></div>
-            <h3>Handcrafted Furniture</h3>
-            <p>Pilgrimage Spaces offers handcrafted furniture chosen for presence, texture and enduring character. These are the kinds of pieces that anchor a room, whether you are shaping a calm lounge, a layered bedroom or a dining area with real personality. Each selection is meant to feel substantial and soulful rather than mass-produced or anonymous.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-vase"></i></div>
-            <h3>Decor and Homeware</h3>
-            <p>The decor and homeware collection helps customers build a living space that feels gathered over time. Decorative objects, table accents and everyday home pieces are selected to add warmth, contrast and crafted detail to shelves, surfaces and corners. These finishing touches make a room feel settled, expressive and distinctly your own.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-rug"></i></div>
-            <h3>Textiles and Soft Furnishings</h3>
-            <p>Textiles and soft furnishings bring softness and depth to the bolder furniture pieces in the collection. Fabrics, layered textures and tactile finishes are ideal for anyone wanting a home that feels welcoming, not overly polished. They help tie a room together while introducing comfort, colour variation and subtle artisanal detail.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon"><i class="fas fa-store"></i></div>
-            <h3>Furniture Store Experience</h3>
-            <p>As a furniture store, Pilgrimage Spaces is built around curation rather than clutter. Shoppers can browse a focused range shaped by craftsmanship, story and visual harmony across categories. It is a useful destination for people furnishing a whole room or simply searching for one memorable item that changes the atmosphere of their space.</p>
-          </div>
-        </div>
+                    <div class="service-item">
+                        <i class="fas fa-couch icon-large" aria-hidden="true"></i>
+                        <h3>Handcrafted Furniture</h3>
+                        <p>Pilgrimage Spaces offers handcrafted furniture chosen for presence, texture and enduring character. These are the kinds of pieces that anchor a room, whether you are shaping a calm lounge, a layered bedroom or a dining area with real personality. Each selection is meant to feel substantial and soulful rather than mass-produced or anonymous.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-vase icon-large" aria-hidden="true"></i>
+                        <h3>Decor and Homeware</h3>
+                        <p>The decor and homeware collection helps customers build a living space that feels gathered over time. Decorative objects, table accents and everyday home pieces are selected to add warmth, contrast and crafted detail to shelves, surfaces and corners. These finishing touches make a room feel settled, expressive and distinctly your own.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-rug icon-large" aria-hidden="true"></i>
+                        <h3>Textiles and Soft Furnishings</h3>
+                        <p>Textiles and soft furnishings bring softness and depth to the bolder furniture pieces in the collection. Fabrics, layered textures and tactile finishes are ideal for anyone wanting a home that feels welcoming, not overly polished. They help tie a room together while introducing comfort, colour variation and subtle artisanal detail.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-store icon-large" aria-hidden="true"></i>
+                        <h3>Furniture Store Experience</h3>
+                        <p>As a furniture store, Pilgrimage Spaces is built around curation rather than clutter. Shoppers can browse a focused range shaped by craftsmanship, story and visual harmony across categories. It is a useful destination for people furnishing a whole room or simply searching for one memorable item that changes the atmosphere of their space.</p>
+                    </div>
+                </div>
       </div>
     </section>
 
-    <section id="testimonials" class="section">
-      <div class="container">
-        <h2>What Our Clients Say</h2>
-        <p>Here is what our clients say about the experience of discovering handcrafted pieces through Pilgrimage Spaces.</p>
-        <div class="testimonials-grid">
-          <div class="testimonial-card"><blockquote>"Met by very passionate owners, excellent service. Pilgrimage, Elegant Furniture with a unique asian infused style, beautifully handcrafted, a fascinating story behind it, along with the hand made textiles and wonderful decorative pieces. A must have, bringing a touch of the East to your home."</blockquote><cite>— Patrick Mcnamara, 5/5 Google review, ⭐⭐⭐⭐⭐</cite></div>
-          <div class="testimonial-card"><blockquote>"Purchasing from Pilgrim spaces was easy and efficient and arrived carefully packaged in Johannesburg. I would definitely buy again and recommend to family and friends."</blockquote><cite>— Pashnee Naicker, 5/5 Google review, ⭐⭐⭐⭐⭐</cite></div>
-          <div class="testimonial-card"><blockquote>"We had the privilege of photographing some of the beautiful furniture and homeware from Pilgrimage Spaces. Truly unique pieces hand crafted by master artisans."</blockquote><cite>— Natalie Boruvka, 5/5 Google review, ⭐⭐⭐⭐⭐</cite></div>
-        </div>
+    <section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+<p class="sitehub-section-intro">Here is what our clients say about the experience of discovering handcrafted pieces through Pilgrimage Spaces.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>"Met by very passionate owners, excellent service. Pilgrimage, Elegant Furniture with a unique asian infused style, beautifully handcrafted, a fascinating story behind it, along with the hand made textiles and wonderful decorative pieces. A must have, bringing a touch of the East to your home."</blockquote>
+        <cite>— Patrick Mcnamara, 5/5 Google review, ⭐⭐⭐⭐⭐</cite>
       </div>
-    </section>
+      <div class="testimonial-card">
+        <blockquote>"Purchasing from Pilgrim spaces was easy and efficient and arrived carefully packaged in Johannesburg. I would definitely buy again and recommend to family and friends."</blockquote>
+        <cite>— Pashnee Naicker, 5/5 Google review, ⭐⭐⭐⭐⭐</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"We had the privilege of photographing some of the beautiful furniture and homeware from Pilgrimage Spaces. Truly unique pieces hand crafted by master artisans."</blockquote>
+        <cite>— Natalie Boruvka, 5/5 Google review, ⭐⭐⭐⭐⭐</cite>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="gallery" class="section">
       <div class="container">
@@ -167,11 +245,11 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>We'd love to hear from you — whether you're searching for a standout furniture piece, thoughtful homeware, or advice on curating a warm, layered interior.</p>
+        <p class="sitehub-section-intro">We'd love to hear from you — whether you're searching for a standout furniture piece, thoughtful homeware, or advice on curating a warm, layered interior.</p>
         <div class="contact-details-row">
           <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>ACT Logistics, 51B Junction Street Parow Industrial, Ravensmead, Cape Town, 7493, South Africa</span></div>
           <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><a href="mailto:deankann@gmail.com">deankann@gmail.com</a></div>
-          <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:0785320831">078 532 0831</a></div>
+          <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:0785320831">0785320831</a></div>
         </div>
         <div class="social-links">
           <a href="https://www.facebook.com/pilgrimagespaces/" target="_blank" rel="noopener" aria-label="Facebook" class="social-circle"><i class="fab fa-facebook-f"></i></a>
