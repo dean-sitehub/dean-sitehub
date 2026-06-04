@@ -213,8 +213,8 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 #hero.hero-split .hero-split-text .hero-content > h1 { position: absolute !important; left: 9% !important; top: 19% !important; width: 82% !important; text-align: center !important; margin: 0 !important; transform: scale(0.928698752228164) !important; transform-origin: top center !important;  }
 #hero.hero-split .hero-split-text .hero-content > p { position: absolute !important; left: 17% !important; top: 51% !important; width: 66% !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important;  }
 #hero.hero-split .hero-split-text .hero-content > h1 { font-style: italic !important; text-transform: none !important; letter-spacing: 0em !important; }
-#hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button { position: absolute !important; left: 26.734155100456178% !important; top: 68% !important; width: 28% !important; text-align: center !important; margin: 0 !important; transform: scale(0.7554110453266039) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
-#hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: absolute !important; left: 51% !important; top: 68% !important; width: 28% !important; text-align: center !important; margin: 0 !important; transform: scale(0.7554110453266039) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
+#hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button { position: absolute !important; left: 39.07801040821977% !important; top: 62.998906010689836% !important; width: 28% !important; text-align: center !important; margin: 0 !important; transform: scale(0.7554110453266039) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
+#hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: absolute !important; left: 39.07801040821977% !important; top: 74.15271014694902% !important; width: 28% !important; text-align: center !important; margin: 0 !important; transform: scale(0.7554110453266039) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; }
 }
 @media (max-width: 767px) {
 #hero.hero-split .hero-split-text .hero-content, #hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > p, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: static !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; min-height: 0 !important; text-align: left !important; }
@@ -224,6 +224,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
