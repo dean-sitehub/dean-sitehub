@@ -205,9 +205,14 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --body-font: 'Open Sans', sans-serif !important;
 }
 
+#hero.hero-split.sitehub-hero-motion[data-sitehub-hero-motion-layout="full-overlay"] { background-position: 50% 50% !important; background-size: 100% auto !important; }
+
+.sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(1.00) !important; transform-origin: 50% 50% !important; }
+
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
