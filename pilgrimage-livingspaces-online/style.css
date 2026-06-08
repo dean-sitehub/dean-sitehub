@@ -230,7 +230,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 #hero.hero-split .hero-split-text::before { display: none !important; }
 #hero.hero-split .hero-split-text .hero-content { position: absolute !important; display: block !important; max-width: none !important; margin: 0 !important; padding: 0 !important; left: 8% !important; top: 10% !important; width: 84% !important; height: 78% !important; min-height: 78% !important; }
 #hero.hero-split .hero-split-text .hero-content .hero-actions { display: contents !important; }
-#hero.hero-split .hero-split-text .hero-content > .eyebrow { position: absolute !important; left: 9% !important; top: 10% !important; width: 82% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(0.62) !important; transform-origin: top center !important; display: block !important; line-height: 1.35 !important; }
+#hero.hero-split .hero-split-text .hero-content > .eyebrow { position: absolute !important; left: 8% !important; top: 10% !important; width: 82% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(0.62) !important; transform-origin: top center !important; display: block !important; line-height: 1.35 !important; }
 #hero.hero-split .hero-split-text .hero-content > h1 { position: absolute !important; left: 8% !important; top: 29% !important; width: 84% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(0.62) !important; transform-origin: top center !important; display: block !important; line-height: 0.92 !important; text-wrap: initial !important; }
 #hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle { position: absolute !important; left: 8% !important; top: 63% !important; width: 84% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(0.62) !important; transform-origin: top center !important; display: block !important; line-height: 1.35 !important; }
 #hero.hero-split .hero-split-text .hero-content > .eyebrow { font-size: clamp(0.84rem, 1.15vw, 1.08rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
@@ -248,3 +248,4 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 }
 
 /* === END CUSTOM STYLING === */
+
