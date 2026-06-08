@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="favicon.png?v=1780908836300">
+  <link rel="icon" type="image/png" href="favicon.png?v=1780909990468">
   <meta charset="UTF-8">
   <meta name="description" content="How It Works for 3Gen products">
   <link rel="canonical" href="https://dean-sitehub.github.io/dean-sitehub/3gen-products/how-it-works.html">
@@ -32,10 +32,9 @@
   
   
   
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1780908836300">
+  <link rel="stylesheet" href="style.css?v=1780909990468">
 </head>
 <body>
   <header class="site-header">
@@ -43,65 +42,96 @@
       <a href="index.html" class="brand"><img src="https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/generation-captured/8a4f8f9d-7d34-46e5-88cb-793d555149e4/logo-1-1780908835458.png" alt="3Gen products logo" class="logo"><span class="brand-name">3Gen products</span></a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="our-services.html">Our Services</a></li>
-          <li><a href="frequently-asked-questions.html">Frequently Asked Questions</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-        </ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#offerings">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-more">
+          <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">More</button>
+          <ul class="sub-nav">
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="our-services.html">Our Services</a></li>
+            <li><a href="frequently-asked-questions.html">Frequently Asked Questions</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+          </ul>
+        </li>
+      </ul>
+        <button id="hamburger" aria-label="Menu">☰</button>
       </nav>
-      <button id="hamburger" aria-label="Menu">☰</button>
     </div>
   </header>
 
   <main>
-    <section class="section page-title-band">
-      <div class="container narrow">
-        <h1 class="page-title">How It Works</h1>
-        <p class="page-intro">3Gen products supports customers from first enquiry through solution selection, rollout planning and follow-up support, with attention to OEM fit and operational use.</p>
+    <section id="hero" class="inner-hero plain-hero sitehub-inner-hero sitehub-inner-hero--image">
+      <div class="hero-content container">
+        <div class="eyebrow">How It Works</div>
+        <h1>A straightforward process for specifying the right vehicle technology</h1>
+        <p>3Gen products is built around matching the right connected solution to the real operating environment, then supporting the technical and commercial path that follows.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2>A straightforward process for technical buying decisions</h2>
-        <div class="cards-grid process-grid">
-          <div class="card"><div class="card-icon"><i class="fas fa-comments"></i></div><h3>1. Share the requirement</h3><p>Start by outlining the vehicles, assets or workforce environment involved and the outcome you need. This may be fleet visibility, in-cab multimedia, connected camera evidence, lone-worker safety or an OEM accessory requirement.</p></div>
-          <div class="card"><div class="card-icon"><i class="fas fa-magnifying-glass-chart"></i></div><h3>2. Define the fit</h3><p>Once the use case is clear, the conversation can narrow to the most suitable technology category or combination of categories. This stage is important because telematics, cameras, tracking and infotainment all solve different problems even when they sit in the same vehicle environment.</p></div>
-          <div class="card"><div class="card-icon"><i class="fas fa-sitemap"></i></div><h3>3. Align integration needs</h3><p>If the project involves vehicle interfacing, OEM accessory alignment or broader deployment planning, those technical and operational requirements are considered early. That helps avoid selecting hardware that appears suitable on paper but creates friction during rollout.</p></div>
-          <div class="card"><div class="card-icon"><i class="fas fa-box-open"></i></div><h3>4. Confirm sourcing and supply route</h3><p>For some customers, the next step is straightforward product supply. For others, distribution routes such as line fit, port fit or direct-to-dealer planning may need to be considered so the solution arrives through the channel that best supports the vehicle program.</p></div>
-          <div class="card"><div class="card-icon"><i class="fas fa-laptop-code"></i></div><h3>5. Deploy the solution</h3><p>Deployment may involve platform access, hardware installation planning, accessory integration or connected camera and tracking setup. The emphasis is on creating a system that is usable in the field rather than a disconnected group of products.</p></div>
-          <div class="card"><div class="card-icon"><i class="fas fa-life-ring"></i></div><h3>6. Support after rollout</h3><p>After implementation, support considerations remain important. Warranty handling, documentation and service-related follow-up help customers manage the technology over time instead of treating the project as complete the moment the hardware is delivered.</p></div>
+        <h2>How the process typically works</h2>
+        <div class="process-grid">
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-comments"></i></div><h3>1. Start with your requirement</h3><p>The process begins with an enquiry by email or contact form. The most useful first step is to explain the vehicle type, fleet context or program need, along with the category you are interested in, such as telematics, infotainment, cameras, tracking or safety devices.</p></div>
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-magnifying-glass-chart"></i></div><h3>2. Clarify application and fit</h3><p>From there, the discussion moves into practical detail. This can include integration requirements, CAN bus considerations, branded program alignment, accessory expectations and the operational outcome you want from the technology rather than just the product name on a list.</p></div>
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-layer-group"></i></div><h3>3. Match the right solution category</h3><p>Once the application is clear, the relevant solution path can be identified. Some customers need a data platform with telematics devices, others need in-cabin multimedia, connected safety cameras, asset trackers or security devices, and some need a broader package that spans more than one category.</p></div>
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-truck-ramp-box"></i></div><h3>4. Confirm sourcing and delivery pathway</h3><p>For structured automotive environments, the delivery path matters. 3Gen products supports sourcing and integration-aware supply models, including scenarios that align with OEM programs, dealer channels and broader distribution requirements rather than one-size-fits-all product supply.</p></div>
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-file-shield"></i></div><h3>5. Prepare for rollout and support</h3><p>After the solution path is agreed, the focus shifts to what supports successful deployment. Depending on the requirement, this may include documentation, warranty handling, reverse logistics considerations and technical guidance that helps the customer manage the solution after supply.</p></div>
+          <div class="process-step card"><div class="card-icon"><i class="fas fa-headset"></i></div><h3>6. Ongoing operational follow-up</h3><p>Connected vehicle technology should remain useful after installation or delivery. The support position around after-sales service helps customers deal with the practical realities of operating, maintaining and scaling the chosen solution over time.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container narrow">
-        <h2>What to expect as a customer</h2>
-        <p>Expect a technical conversation that starts with use case and fit rather than generic sales talk. If the need is specific, 3Gen products can focus on one product family such as asset tracking or safety devices; if the requirement spans multiple systems, the process can expand to include cloud platforms, accessories, integration considerations and support planning.</p>
-        <p>This approach is particularly useful for organisations that have to think beyond the initial purchase. Vehicle compatibility, distribution practicalities, documentation and after-sales support all influence whether a technology decision remains workable once it reaches the field.</p>
+    <section class="section surface-section">
+      <div class="container two-col-copy">
+        <div class="card">
+          <h3>What to include in your enquiry</h3>
+          <p>To make the first discussion more productive, include the vehicle or asset type involved, whether the requirement is for an OEM, dealer or fleet setting, and the main outcome you need. It also helps to mention if you need branding alignment, camera coverage, live data visibility, navigation, lone-worker safety or asset monitoring.</p>
+        </div>
+        <div class="card">
+          <h3>What happens next</h3>
+          <p>Once your requirement is understood, the next step is usually a more focused discussion around solution fit, technical compatibility and supply considerations. That keeps the process consultative and useful, especially where connected systems need to integrate into broader automotive operations.</p>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container narrow">
+      <div class="container references-block">
         <h2>Useful Links</h2>
-        <div class="card simple-card">
-          <p><a href="https://3gensa.co.za/services" target="_blank" rel="noopener">Source services page</a></p>
-          <p><a href="https://3gensa.co.za/contact" target="_blank" rel="noopener">Source contact page</a></p>
-          <p><a href="index.html#contact">Start an enquiry</a></p>
+        <ul class="reference-list">
+          <li><a href="https://3gensa.co.za/services" target="_blank" rel="noopener">3Gen Products services</a></li>
+          <li><a href="https://3gensa.co.za/products" target="_blank" rel="noopener">3Gen Products products</a></li>
+          <li><a href="https://3gensa.co.za/contact" target="_blank" rel="noopener">Get in touch</a></li>
+        </ul>
+        <div class="cta-panel">
+          <p>If you are ready to discuss a requirement, the quickest next step is to send a clear brief through the contact page.</p>
+          <a href="index.html#contact" class="cta-button">Contact 3Gen products</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">© <span id="year"></span> 3Gen products. All rights reserved. | Created by <a href="https://www.sitehub.co.za">SiteHub</a></footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> 3Gen products. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="frequently-asked-questions.html">Frequently Asked Questions</a>
+        <a href="about-us.html">About Us</a>
+        <a href="how-it-works.html">How It Works</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-    hamburger.addEventListener('click', function() { navLinks.classList.toggle('open'); });
+    hamburger.addEventListener('click', function () { navLinks.classList.toggle('open'); });
   </script>
 </body>
 </html>
