@@ -146,7 +146,15 @@
           var cartKey = [itemId, 'base', 'no-options'].join('|');
           cart.items[cartKey] = { itemId: itemId, slug: itemSlug, name: itemName, quantity: quantity, variantId: undefined, optionIds: [] };
           cart.updatedAt = new Date().toISOString();
-          var items = Object.keys(cart.items).map(function(key) { return cart.items[key]; });
+          var items = Object.keys(cart.items).map(function(key) {
+            var line = cart.items[key] || {};
+            return {
+              catalogItemId: line.itemId,
+              variantId: line.variantId || null,
+              selectedOptionIds: Array.isArray(line.optionIds) ? line.optionIds : [],
+              quantity: Math.max(1, Math.min(99, parseInt(line.quantity, 10) || 1))
+            };
+          });
           var updateResponse = await fetch(appBaseUrl + '/api/public/sites/' + encodeURIComponent(siteId) + '/cart/' + encodeURIComponent(cart.cartId), {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
