@@ -53,13 +53,14 @@
             <a class="shop-showcase-back-link" href="../index.html">Back to shop</a>
             <p class="shop-showcase-kicker">Products</p>
             <h1>Furniture Store</h1>
-            <p class="shop-showcase-price">Quote required</p>
+            <p class="shop-showcase-price">150</p>
             <p>View product details and add this item to your secure cart.</p>
             
             <div class="shop-item-actions">
-              <a class="cta-button" href="../../index.html#contact">Request a quote</a>
+              <label>Qty <input id="shop-item-quantity" type="number" min="1" max="99" value="1"></label>
+              <button class="cta-button" id="shop-item-add" type="button">Add to cart</button>
             </div>
-            <p class="shop-item-status" id="shop-item-status" role="status">This item is quoted to order. Contact us for pricing and availability.</p>
+            <p class="shop-item-status" id="shop-item-status" role="status"></p>
           </article>
         </div>
       </div>
@@ -105,8 +106,8 @@
       var siteId = "8ff60907-fe68-4540-94af-d44147082a48";
       var appBaseUrl = "https://sitehub-staging.vercel.app";
       var cartHref = "https://sitehub-staging.vercel.app/shop/8ff60907-fe68-4540-94af-d44147082a48/cart";
-      var catalogItemLookup = {"76e7d616-e006-40c3-92b9-035ec2a73cc0":{"name":"Furniture Store","slug":"furniture-store","imageUrl":"https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/pilgrimage-livingspaces/hero-b0fa74449f005972.jpg","priceLabel":"Quote required","optionNames":{}}};
-      var currentItem = {"id":"76e7d616-e006-40c3-92b9-035ec2a73cc0","slug":"furniture-store","name":"Furniture Store","priceLabel":"Quote required","imageUrl":"https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/pilgrimage-livingspaces/hero-b0fa74449f005972.jpg"};
+      var catalogItemLookup = {"76e7d616-e006-40c3-92b9-035ec2a73cc0":{"name":"Furniture Store","slug":"furniture-store","imageUrl":"https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/pilgrimage-livingspaces/hero-b0fa74449f005972.jpg","priceLabel":"150","optionNames":{}}};
+      var currentItem = {"id":"76e7d616-e006-40c3-92b9-035ec2a73cc0","slug":"furniture-store","name":"Furniture Store","priceLabel":"150","imageUrl":"https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/pilgrimage-livingspaces/hero-b0fa74449f005972.jpg"};
       var button = document.getElementById('shop-item-add');
       var quantityInput = document.getElementById('shop-item-quantity');
       var status = document.getElementById('shop-item-status');
