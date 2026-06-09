@@ -410,12 +410,6 @@
 
       var initialCart = readCart();
       renderCart(initialCart);
-      loadCartSummary(initialCart).then(function(hydratedCart) {
-        initialCart = hydratedCart;
-        writeCart(hydratedCart);
-      }).catch(function() {
-        renderCart(initialCart);
-      });
 
       cartLauncher.addEventListener('click', openCart);
       cartBackdrop.addEventListener('click', closeCart);
