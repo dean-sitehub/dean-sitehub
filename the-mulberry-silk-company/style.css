@@ -200,9 +200,10 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 #hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { display: inline-flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; min-height: 50px !important; width: 150px !important; padding: 0 24px !important; line-height: 1.2 !important; white-space: nowrap !important; border-width: 1px !important; border-style: solid !important; border-radius: 9999px !important; flex: 0 0 150px !important; }
 #hero.hero-split .hero-actions > .cta-button { border-color: transparent !important; }
 
-#hero.hero-split .hero-split-image { background-position: 50% 50% !important; background-size: auto 100% !important; background-repeat: no-repeat !important; }
+#hero.hero-split.sitehub-hero-motion[data-sitehub-hero-motion-layout="full-overlay"] { background-position: 50% 50% !important; background-size: 74% auto !important; }
 
-.sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(1.00) !important; transform-origin: 50% 50% !important; }
+.sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(0.74) !important; transform-origin: 50% 50% !important; }
 
 /* === END CUSTOM STYLING === */
+
 
