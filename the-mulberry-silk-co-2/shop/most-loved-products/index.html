@@ -30,6 +30,10 @@
           <li><a href="../../index.html#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="shop-cart-launcher" id="shop-cart-launcher" type="button" aria-label="Open cart">
+        <span class="shop-cart-launcher-icon" aria-hidden="true">🛒</span>
+        <span class="shop-cart-launcher-badge" id="shop-cart-launcher-badge">0</span>
+      </button>
       <button id="hamburger" aria-label="Menu">☰</button>
     </div>
   </header>
@@ -55,7 +59,36 @@
         </div>
       </div>
     </section>
-    
+    <div class="shop-cart-modal" id="shop-cart-modal" aria-hidden="true">
+      <button class="shop-cart-modal-backdrop" id="shop-cart-backdrop" type="button" aria-label="Close cart"></button>
+      <aside class="shop-cart-drawer" role="dialog" aria-modal="true" aria-labelledby="shop-cart-title">
+        <div class="shop-cart-header">
+          <div>
+            <p class="shop-showcase-kicker">Your cart</p>
+            <h2 id="shop-cart-title">Ready to review</h2>
+          </div>
+          <button class="shop-cart-close" id="shop-cart-close" type="button" aria-label="Close cart">×</button>
+        </div>
+        <div class="shop-cart-body">
+          <p class="shop-cart-note">Review your items here without leaving this page.</p>
+          <div class="shop-cart-empty" id="shop-cart-empty">Your cart is empty.</div>
+          <div class="shop-cart-lines" id="shop-cart-lines"></div>
+        </div>
+        <div class="shop-cart-footer">
+          <div class="shop-cart-summary-row">
+            <span>Items</span>
+            <strong id="shop-cart-count">0</strong>
+          </div>
+          <div class="shop-cart-summary-row shop-cart-summary-total">
+            <span>Subtotal</span>
+            <strong id="shop-cart-subtotal">R0.00</strong>
+          </div>
+          <p class="shop-cart-help" id="shop-cart-help">Checkout stays secure through SiteHub and PayFast when you continue.</p>
+          <button class="shop-cart-clear" id="shop-cart-clear" type="button">Clear cart</button>
+          <a class="cta-button shop-cart-checkout" id="shop-cart-checkout" href="https://sitehub-staging.vercel.app/shop/e1969f2f-77c7-43de-9707-52aceb30d1d0/cart">Continue to checkout</a>
+        </div>
+      </aside>
+    </div>
   </main>
   <footer><div>© <span id="year"></span> The Mulberry Silk Co. All rights reserved.</div><div class="sitehub-footer-links"><a href="../../terms-conditions.html">Terms &amp; Conditions</a> <span aria-hidden="true">|</span> <a href="../../privacy-notice.html">Privacy Notice</a></div><div>Created by <a href="https://www.sitehub.co.za">SiteHub</a></div></footer>
   <script>
@@ -68,7 +101,8 @@
       var button = document.getElementById('shop-item-add');
       var quantityInput = document.getElementById('shop-item-quantity');
       var status = document.getElementById('shop-item-status');
-      var viewCartLink = document.getElementById('shop-item-view-cart');
+      var cartLauncher = document.getElementById('shop-cart-launcher');
+      var cartLauncherBadge = document.getElementById('shop-cart-launcher-badge');
       var cartModal = document.getElementById('shop-cart-modal');
       var cartBackdrop = document.getElementById('shop-cart-backdrop');
       var cartClose = document.getElementById('shop-cart-close');
@@ -79,7 +113,7 @@
       var cartCheckout = document.getElementById('shop-cart-checkout');
       var cartHelp = document.getElementById('shop-cart-help');
       var cartClear = document.getElementById('shop-cart-clear');
-      if (!section || !button || !quantityInput || !status) return;
+      if (!section || !status) return;
       var siteId = section.getAttribute('data-site-id');
       var itemId = section.getAttribute('data-item-id');
       var itemSlug = section.getAttribute('data-item-slug') || itemId;
@@ -141,6 +175,8 @@
         cartEmpty.style.display = lines.length ? 'none' : 'block';
         cartLines.style.display = lines.length ? 'grid' : 'none';
         cartCount.textContent = String(totalItems);
+        if (cartLauncherBadge) cartLauncherBadge.textContent = String(totalItems);
+        if (cartLauncher) cartLauncher.setAttribute('aria-label', totalItems ? ('Open cart with ' + totalItems + ' item' + (totalItems === 1 ? '' : 's')) : 'Open cart');
         cartSubtotal.textContent = 'Calculated at checkout';
         if (cartCheckout) cartCheckout.setAttribute('href', buildCartHref(cart));
         if (cartCheckout) cartCheckout.setAttribute('aria-disabled', lines.length ? 'false' : 'true');
@@ -217,7 +253,7 @@
       }
       var initialCart = readCart();
       renderCart(initialCart);
-      if (viewCartLink) viewCartLink.addEventListener('click', openCart);
+      if (cartLauncher) cartLauncher.addEventListener('click', openCart);
       if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
       if (cartClose) cartClose.addEventListener('click', closeCart);
       if (cartClear) cartClear.addEventListener('click', function() {
@@ -289,7 +325,7 @@
           renderCart(readCart());
         }
       });
-      button.addEventListener('click', async function() {
+      if (button && quantityInput) button.addEventListener('click', async function() {
         button.disabled = true;
         status.textContent = 'Adding item...';
         try {
