@@ -165,6 +165,14 @@
         cartModal.setAttribute('aria-hidden', 'true');
       }
 
+      function toggleCart() {
+        if (cartModal.classList.contains('open')) {
+          closeCart();
+          return;
+        }
+        openCart();
+      }
+
       function lineKeyForSummary(entry) {
         var optionIds = Array.isArray(entry.selected_option_ids) ? entry.selected_option_ids : [];
         return [entry.catalog_item_id, entry.variant_id || 'base', optionIds.length ? optionIds.join(',') : 'no-options'].join('|');
@@ -412,7 +420,7 @@
       var initialCart = readCart();
       renderCart(initialCart);
 
-      cartLauncher.addEventListener('click', openCart);
+      cartLauncher.addEventListener('click', toggleCart);
       cartBackdrop.addEventListener('click', closeCart);
       cartClose.addEventListener('click', closeCart);
       cartClear.addEventListener('click', function() {
