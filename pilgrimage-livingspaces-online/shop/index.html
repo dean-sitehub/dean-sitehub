@@ -309,7 +309,7 @@
               : (line.priceLabel || meta.priceLabel || 'Price confirmed at checkout');
           var priceDetail = unitCents !== null && unitCents > 0 && quantity > 1
             ? quantity + ' x ' + formatCurrency(unitCents)
-            : (line.priceLabel || meta.priceLabel || 'Price confirmed at checkout');
+            : '';
 
           totalItems += quantity;
           if (lineTotalCents !== null && lineTotalCents > 0) subtotalCents += lineTotalCents;
@@ -324,7 +324,7 @@
               '<div class="shop-cart-line-copy">' +
                 '<strong>' + escapeText(line.name || meta.name || 'Item') + '</strong>' +
                 '<span class="shop-cart-line-price">' + escapeText(priceText) + '</span>' +
-                '<span class="shop-cart-line-meta">' + escapeText(priceDetail) + '</span>' +
+                (priceDetail ? '<span class="shop-cart-line-meta">' + escapeText(priceDetail) + '</span>' : '') +
                 (selectedOptions.length
                   ? '<ul class="shop-cart-line-options">' + selectedOptions.map(function(option) {
                       return '<li>' + escapeText(option.name || '') + '</li>';
