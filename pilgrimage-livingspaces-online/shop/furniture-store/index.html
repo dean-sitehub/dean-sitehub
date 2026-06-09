@@ -30,6 +30,10 @@
           <li><a href="../../index.html#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="shop-cart-launcher" id="shop-cart-launcher" type="button" aria-label="Open cart">
+        <span class="shop-cart-launcher-icon" aria-hidden="true">🛒</span>
+        <span class="shop-cart-launcher-badge" id="shop-cart-launcher-badge">0</span>
+      </button>
       <button id="hamburger" aria-label="Menu">☰</button>
     </div>
   </header>
@@ -50,7 +54,6 @@
             <div class="shop-item-actions">
               <label>Qty <input id="shop-item-quantity" type="number" min="1" max="99" value="1"></label>
               <button class="cta-button" id="shop-item-add" type="button">Add to cart</button>
-              <button class="shop-showcase-back-link shop-cart-trigger" id="shop-item-view-cart" type="button">View cart</button>
             </div>
             <p class="shop-item-status" id="shop-item-status" role="status"></p>
           </article>
@@ -99,7 +102,8 @@
       var button = document.getElementById('shop-item-add');
       var quantityInput = document.getElementById('shop-item-quantity');
       var status = document.getElementById('shop-item-status');
-      var viewCartLink = document.getElementById('shop-item-view-cart');
+      var cartLauncher = document.getElementById('shop-cart-launcher');
+      var cartLauncherBadge = document.getElementById('shop-cart-launcher-badge');
       var cartModal = document.getElementById('shop-cart-modal');
       var cartBackdrop = document.getElementById('shop-cart-backdrop');
       var cartClose = document.getElementById('shop-cart-close');
@@ -110,7 +114,7 @@
       var cartCheckout = document.getElementById('shop-cart-checkout');
       var cartHelp = document.getElementById('shop-cart-help');
       var cartClear = document.getElementById('shop-cart-clear');
-      if (!section || !button || !quantityInput || !status) return;
+      if (!section || !status) return;
       var siteId = section.getAttribute('data-site-id');
       var itemId = section.getAttribute('data-item-id');
       var itemSlug = section.getAttribute('data-item-slug') || itemId;
@@ -172,6 +176,8 @@
         cartEmpty.style.display = lines.length ? 'none' : 'block';
         cartLines.style.display = lines.length ? 'grid' : 'none';
         cartCount.textContent = String(totalItems);
+        if (cartLauncherBadge) cartLauncherBadge.textContent = String(totalItems);
+        if (cartLauncher) cartLauncher.setAttribute('aria-label', totalItems ? ('Open cart with ' + totalItems + ' item' + (totalItems === 1 ? '' : 's')) : 'Open cart');
         cartSubtotal.textContent = 'Calculated at checkout';
         if (cartCheckout) cartCheckout.setAttribute('href', buildCartHref(cart));
         if (cartCheckout) cartCheckout.setAttribute('aria-disabled', lines.length ? 'false' : 'true');
@@ -248,7 +254,7 @@
       }
       var initialCart = readCart();
       renderCart(initialCart);
-      if (viewCartLink) viewCartLink.addEventListener('click', openCart);
+      if (cartLauncher) cartLauncher.addEventListener('click', openCart);
       if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
       if (cartClose) cartClose.addEventListener('click', closeCart);
       if (cartClear) cartClear.addEventListener('click', function() {
@@ -320,7 +326,7 @@
           renderCart(readCart());
         }
       });
-      button.addEventListener('click', async function() {
+      if (button && quantityInput) button.addEventListener('click', async function() {
         button.disabled = true;
         status.textContent = 'Adding item...';
         try {
