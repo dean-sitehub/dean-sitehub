@@ -194,11 +194,8 @@
 
   <footer><div>© <span id="year"></span> The Mulberry Silk Company. All rights reserved.</div><div class="sitehub-footer-links"><a href="terms-conditions.html">Terms &amp; Conditions</a> <span aria-hidden="true">|</span> <a href="privacy-notice.html">Privacy Notice</a></div><div>Created by <a href="https://www.sitehub.co.za">SiteHub</a></div></footer>
 
-  
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Hamburger toggle
     var hamburger = document.getElementById('hamburger');
     var navLinks = document.getElementById('nav-links');
     if (hamburger && navLinks) {
@@ -214,7 +211,6 @@
     }
     moreTriggers.forEach(function(trigger) {
       trigger.addEventListener('click', function(event) {
-        if (window.innerWidth <= 767) return;
         event.preventDefault();
         event.stopPropagation();
         var parent = trigger.closest('.nav-more');
@@ -226,7 +222,6 @@
       });
     });
     document.addEventListener('click', closeMoreMenus);
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
       a.addEventListener('click', function(e) {
         var target = document.querySelector(this.getAttribute('href'));
@@ -234,5 +229,4 @@
       });
     });
   </script>
-  
 </body></html>
