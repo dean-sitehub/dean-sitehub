@@ -215,3 +215,40 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 
 /* ── SiteHub inner hero overlay (post-processed) ── */
 .sitehub-inner-hero{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:clamp(300px,44vh,460px);overflow:hidden;text-align:center}.sitehub-inner-hero.sitehub-inner-hero--image{background-image:linear-gradient(180deg,rgba(15,23,42,.58),rgba(15,23,42,.48)),url('hero-800x400.jpg?v=1781169094789');background-position:center;background-size:cover}.sitehub-inner-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,23,42,.22) 0%,rgba(15,23,42,.1) 38%,rgba(15,23,42,.28) 100%);opacity:0;transition:opacity .2s ease;z-index:0}.sitehub-inner-hero.sitehub-inner-hero--image::before{opacity:1}.sitehub-inner-hero>.container,.sitehub-inner-hero .sitehub-inner-hero-content{position:relative;z-index:1}.sitehub-inner-hero.sitehub-inner-hero--image .page-title,.sitehub-inner-hero.sitehub-inner-hero--image .lead,.sitehub-inner-hero.sitehub-inner-hero--image p,.sitehub-inner-hero.sitehub-inner-hero--image a{color:#fff !important;text-shadow:0 2px 20px rgba(0,0,0,.24)}.sitehub-inner-hero.sitehub-inner-hero--image .text-link{text-decoration-color:rgba(255,255,255,.85)}@media (max-width:767px){.sitehub-inner-hero{min-height:clamp(240px,34vh,320px)}}
+
+
+/* === SITEHUB CUSTOM STYLING === */
+/* Auto-generated from user styling preferences */
+
+:root {
+  --color-primary: #7c3f20 !important;
+  --primary-color: #7c3f20 !important;
+  --primary-blue: #7c3f20 !important;
+  --color-secondary: #d6a35d !important;
+  --secondary-color: #d6a35d !important;
+  --secondary-blue: #d6a35d !important;
+  --logo-filter: none !important;
+  --about-image-zoom: 0.86 !important;
+  --font-heading: 'Poppins', sans-serif !important;
+  --heading-font: 'Poppins', sans-serif !important;
+  --font-body: 'Nunito', sans-serif !important;
+  --body-font: 'Nunito', sans-serif !important;
+}
+
+#hero.hero-split .cta-button, #hero .cta-button { background: #d6a35d !important; border-color: transparent !important; }
+
+#hero.hero-split .cta-button, #hero .cta-button { color: #7c3f20 !important; }
+#hero.hero-split .btn.btn-secondary, #hero .btn.btn-secondary { color: #7c3f20 !important; border-color: #7c3f2066 !important; }
+
+#hero.hero-split .hero-actions { display: flex !important; flex-wrap: wrap !important; gap: 12px !important; align-items: stretch !important; }
+#hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { display: inline-flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; min-height: 50px !important; width: 150px !important; padding: 0 24px !important; line-height: 1.2 !important; white-space: nowrap !important; border-width: 1px !important; border-style: solid !important; border-radius: 9999px !important; flex: 0 0 150px !important; }
+#hero.hero-split .hero-actions > .cta-button { border-color: transparent !important; }
+
+#hero.hero-split .hero-split-image { background-position: 50% 50% !important; background-size: auto 100% !important; background-repeat: no-repeat !important; }
+
+.sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(1.00) !important; transform-origin: 50% 50% !important; }
+
+#about .about-photo, section#about .about-photo { width: min(100%, calc(420px * var(--about-image-zoom, 1))) !important; max-width: 100% !important; max-height: calc(340px * var(--about-image-zoom, 1)) !important; height: auto !important; object-fit: cover !important; object-position: center !important; margin: 1.5rem auto !important; display: block !important; }
+#about .about-grid .about-photo, section#about .about-grid .about-photo { justify-self: center !important; align-self: center !important; }
+
+/* === END CUSTOM STYLING === */
