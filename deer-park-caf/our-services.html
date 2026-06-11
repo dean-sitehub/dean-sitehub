@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="favicon.png?v=1781090428514">
+  <link rel="icon" type="image/png" href="favicon.png?v=1781165294438">
   <meta charset="UTF-8">
   <meta name="description" content="Our Services for Deer Park Café">
   <link rel="canonical" href="https://dean-sitehub.github.io/dean-sitehub/deer-park-caf/our-services.html">
@@ -33,14 +33,17 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1781090428514">
+  <link rel="stylesheet" href="style.css?v=1781165294438">
 </head>
 <body>
-<header class="site-header"><div class="nav-inner"><a href="index.html" class="brand"><img src="logo.png?v=1781090428514" alt="Deer Park Café logo" class="logo"><span class="brand-name">Deer Park Café</span></a><nav class="primary-nav"><ul id="nav-links">
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="logo.png?v=1781165294438" alt="Deer Park Café logo" class="logo"><span class="brand-name">Deer Park Café</span></a>
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#offerings">Services</a></li>
-        <li><a href="booking.html">Book</a></li>
         <li><a href="shop/index.html">Shop Now</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
         <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -53,19 +56,64 @@
             <li><a href="our-services.html">Service Details</a></li>
           </ul>
         </li>
-      </ul><button id="hamburger" aria-label="Menu">☰</button></nav></div></header>
-<main>
-<section class="page-hero section"><div class="container"><span class="eyebrow">Our Services</span><h1>Simple food, weekly variety and an easy place to gather</h1><p>Deer Park Café offers a clear, welcoming cafe experience shaped by its park-side location and neighbourhood character.</p></div></section>
-<section class="section"><div class="container"><div class="cards-grid">
-<div class="card"><img src="https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/deer-park-cafe/gallery-f7d70b145d610278.jpg" alt="Breakfasts at Deer Park Café" class="card-photo"><div class="card-icon"><i class="fas fa-egg"></i></div><h3>Breakfast Service</h3><p>Breakfast at Deer Park Café is designed for people who want to start the day in a relaxed setting rather than rushing through it. It suits solo visitors, parents with children, friends catching up, and anyone heading to or from the park who wants a proper sit-down meal and a good coffee.</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-bowl-food"></i></div><h3>Light Lunches</h3><p>The lunch menu focuses on approachable, satisfying dishes that work equally well for weekday breaks and casual weekend visits. Guests can expect food that feels fresh and balanced, with the value coming from comfort, consistency and the setting as much as the meal itself.</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-house"></i></div><h3>Home-Style Meals</h3><p>Home-style meals are part of what makes Deer Park Café feel personal rather than generic. The emphasis is on food that feels grounded and generous, giving customers a dependable local option when they want something more comforting than a grab-and-go stop.</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-calendar-alt"></i></div><h3>Weekly Changing Menu</h3><p>Regular guests are rewarded with variety because the menu changes through the week. This means there is often something new to try while the overall style of the café remains familiar and easy to understand.</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-pepper-hot"></i></div><h3>Authentic Indian Specials</h3><p>Authentic Indian specials are specifically mentioned in the source evidence and add a distinctive note to the menu. They give the café an extra layer of personality for diners who want flavourful, warming dishes alongside more traditional cafe favourites.</p></div>
-<div class="card"><img src="https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/source-captured/deer-park-cafe/about-09b5c743ef51a9c8.jpg" alt="Family-friendly dining at Deer Park Café" class="card-photo"><div class="card-icon"><i class="fas fa-children"></i></div><h3>Family-Friendly Dining</h3><p>The café's environment makes it especially well suited to families looking for somewhere comfortable and informal. Its position beside the park and its relaxed atmosphere make it easier for groups to linger, meet up and enjoy a meal without feeling boxed into a formal dining experience.</p></div>
-</div><div class="button-row center top-gap"><a href="booking.html" class="cta-button btn">Reserve a Table</a></div></div></section>
-</main>
-<footer><div>© <span id="year"></span> Deer Park Café. All rights reserved.</div><div class="sitehub-footer-links"><a href="terms-conditions.html">Terms &amp; Conditions</a> <span aria-hidden="true">|</span> <a href="privacy-notice.html">Privacy Notice</a></div><div>Created by <a href="https://www.sitehub.co.za">SiteHub</a></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();const hamburger=document.getElementById('hamburger');const navLinks=document.getElementById('nav-links');const moreTrigger=document.querySelector('.nav-more-trigger');const moreItem=document.querySelector('.nav-more');hamburger.addEventListener('click',()=>navLinks.classList.toggle('open'));if(moreTrigger&&moreItem){moreTrigger.addEventListener('click',()=>{const expanded=moreTrigger.getAttribute('aria-expanded')==='true';moreTrigger.setAttribute('aria-expanded',String(!expanded));moreItem.classList.toggle('open');});}</script>
+      </ul>
+        <button id="hamburger" aria-label="Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero compact-hero">
+      <div class="container">
+        <h1>Our Services</h1>
+        <p>Deer Park Café offers café dining built around relaxed mornings, easy lunches and the comfort of returning to a place that feels familiar.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="service-detail-grid">
+          <article class="card service-detail-card">
+            <img src="service-1.jpg?v=1781165294438" alt="Breakfast and café meals" class="card-photo">
+            <div class="card-icon"><i class="fas fa-egg"></i></div>
+            <h2>Breakfast Service</h2>
+            <p>Breakfast is one of the core reasons guests visit Deer Park Café. It suits early park walks, slow catch-ups with friends and family outings where the setting matters as much as the meal itself.</p>
+            <p>Visitors can expect a breakfast experience that feels unhurried and grounded in café comfort rather than formality. The value is simple: a good start to the day in a place with space, views and an atmosphere people enjoy staying in.</p>
+          </article>
+          <article class="card service-detail-card">
+            <img src="about.jpg?v=1781165294438" alt="Light lunches at Deer Park Café" class="card-photo">
+            <div class="card-icon"><i class="fas fa-sandwich"></i></div>
+            <h2>Light Lunches</h2>
+            <p>For midday visits, the café offers light lunches that work well for locals, visitors and families looking for something satisfying without the heaviness of a formal meal. The menu style remains approachable, making it easy to drop in after time spent outdoors.</p>
+            <p>This service is especially valuable for people wanting a relaxed lunch stop in Vredehoek with the added appeal of the park-side location. It turns an ordinary lunch into a more scenic, comfortable outing.</p>
+          </article>
+          <article class="card service-detail-card">
+            <img src="gallery-1.jpg?v=1781165294438" alt="Weekly specials and café atmosphere" class="card-photo">
+            <div class="card-icon"><i class="fas fa-fire-burner"></i></div>
+            <h2>Home-Style Meals &amp; Weekly Specials</h2>
+            <p>Deer Park Café is also known for home-style meals supported by a weekly changing menu. That means regular guests are not seeing the exact same options every time, while still getting food that feels familiar and generous.</p>
+            <p>Source-backed details specifically mention authentic Indian specials, giving this part of the offering extra character. For customers, that means more variety, more reason to return and a café experience that stays rooted in comfort while offering something distinctive.</p>
+          </article>
+        </div>
+        <div class="reference-block">
+          <h2>Useful Links</h2>
+          <ul>
+            <li><a href="shop/index.html">View the Online Shop Snapshot</a></li>
+            <li><a href="https://www.facebook.com/deerparkcafe/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/deerparkcafe/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="center-cta"><a href="shop/index.html" class="cta-button">See Our Menu</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div>© <span id="year"></span> Deer Park Café. All rights reserved.</div><div class="sitehub-footer-links"><a href="terms-conditions.html">Terms &amp; Conditions</a> <span aria-hidden="true">|</span> <a href="privacy-notice.html">Privacy Notice</a></div><div>Created by <a href="https://www.sitehub.co.za">SiteHub</a></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
 
 </body></html>
