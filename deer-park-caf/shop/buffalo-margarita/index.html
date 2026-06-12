@@ -562,6 +562,18 @@
         renderCart(cart);
       }
 
+      function mergeCartSession(currentCart, syncedCart) {
+        var normalizedCurrent = normalizeStoredCart(currentCart);
+        return {
+          siteId: normalizedCurrent.siteId || siteId,
+          cartId: syncedCart && syncedCart.cartId ? syncedCart.cartId : normalizedCurrent.cartId,
+          cartToken: syncedCart && syncedCart.cartToken ? syncedCart.cartToken : normalizedCurrent.cartToken,
+          expiresAt: syncedCart && syncedCart.expiresAt ? syncedCart.expiresAt : normalizedCurrent.expiresAt,
+          items: normalizedCurrent.items || {},
+          updatedAt: normalizedCurrent.updatedAt || new Date().toISOString()
+        };
+      }
+
       var pendingSyncTimer = null;
       var syncInFlight = null;
       var syncQueued = false;
@@ -595,16 +607,30 @@
 
         var successMessage = queuedSyncMessage;
         var shouldOpenCart = queuedSyncShouldOpen;
+        var requestCart = normalizeStoredCart(readCart());
+        var requestUpdatedAt = requestCart.updatedAt || '';
         queuedSyncMessage = 'Cart updated.';
         queuedSyncShouldOpen = false;
 
         syncInFlight = (async function() {
           try {
-            var syncedCart = await syncCart(readCart());
+            var syncedCart = await syncCart(requestCart);
+            var currentCart = normalizeStoredCart(readCart());
+            var hasNewerLocalState = (currentCart.updatedAt || '') !== requestUpdatedAt;
+            var shouldPreserveLocalCart = hasNewerLocalState || syncQueued || Boolean(pendingSyncTimer);
+            if (shouldPreserveLocalCart) {
+              var preservedCart = mergeCartSession(currentCart, syncedCart);
+              initialCart = preservedCart;
+              writeCart(preservedCart);
+              if (status) status.textContent = 'Saving cart...';
+              if (shouldOpenCart) openCart();
+              return preservedCart;
+            }
             initialCart = syncedCart;
             writeCart(syncedCart);
             if (status) status.textContent = successMessage;
             if (shouldOpenCart) openCart();
+            return syncedCart;
           } catch (error) {
             if (status) status.textContent = error && error.message ? error.message : 'Could not update cart.';
             renderCart(readCart());
