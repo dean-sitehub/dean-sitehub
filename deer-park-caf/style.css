@@ -228,7 +228,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --secondary-color: #d6a35d !important;
   --secondary-blue: #d6a35d !important;
   --logo-filter: none !important;
-  --about-image-zoom: 0.86 !important;
+  --about-image-zoom: 0.8 !important;
   --font-heading: 'Poppins', sans-serif !important;
   --heading-font: 'Poppins', sans-serif !important;
   --font-body: 'Nunito', sans-serif !important;
@@ -285,6 +285,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 #about .about-grid .about-photo, section#about .about-grid .about-photo { justify-self: center !important; align-self: center !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
