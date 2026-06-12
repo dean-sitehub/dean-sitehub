@@ -27,7 +27,7 @@
       <nav>
         <ul id="nav-links">
           <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../booking.html">Book</a></li><li><a href="../../frequently-asked-questions.html">Frequently Asked Questions</a></li><li><a href="../../about-us.html">About Us</a></li><li><a href="../../our-services.html">Our Services</a></li><li><a href="../../terms-conditions.html">Terms &amp; Conditions</a></li>
+          <li><a href="../../booking.html">Book</a></li><li><a href="../../frequently-asked-questions.html">FAQ</a></li><li><a href="../../about-us.html">About Us</a></li><li><a href="../../our-services.html">Our Services</a></li><li><a href="../../terms-conditions.html">Terms &amp; Conditions</a></li>
           <li><a href="../index.html" aria-current="page">Shop</a></li>
           <li><a href="../../index.html#contact">Contact</a></li>
         </ul>
@@ -253,8 +253,22 @@
         openCart();
       }
 
+      function optionIdsFromSelectedOptions(selectedOptions) {
+        if (!Array.isArray(selectedOptions)) return [];
+        return Array.from(new Set(selectedOptions.map(function(option) {
+          return option && typeof option.id === 'string' ? option.id : '';
+        }).filter(Boolean)));
+      }
+
+      function optionIdsFromSummary(entry) {
+        if (Array.isArray(entry.selected_option_ids) && entry.selected_option_ids.length) {
+          return Array.from(new Set(entry.selected_option_ids.filter(Boolean)));
+        }
+        return optionIdsFromSelectedOptions(entry.selected_options);
+      }
+
       function lineKeyForSummary(entry) {
-        var optionIds = Array.isArray(entry.selected_option_ids) ? entry.selected_option_ids : [];
+        var optionIds = optionIdsFromSummary(entry);
         return buildCartKey(entry.catalog_item_id, entry.variant_id, optionIds);
       }
 
@@ -266,6 +280,12 @@
           var line = rawItems[key];
           if (!line || typeof line !== 'object') return;
           var normalizedItemId = line.itemId || line.catalogItemId;
+          var selectedOptions = Array.isArray(line.selectedOptions) ? line.selectedOptions : [];
+          var optionIds = Array.isArray(line.optionIds) && line.optionIds.length
+            ? line.optionIds
+            : Array.isArray(line.selectedOptionIds) && line.selectedOptionIds.length
+              ? line.selectedOptionIds
+              : optionIdsFromSelectedOptions(selectedOptions);
           if (!normalizedItemId) return;
           normalizedItems[key] = {
             itemId: normalizedItemId,
@@ -273,8 +293,8 @@
             name: line.name || (catalogItemLookup[normalizedItemId] ? catalogItemLookup[normalizedItemId].name : 'Item'),
             quantity: Math.max(1, Math.min(99, parseInt(line.quantity, 10) || 1)),
             variantId: line.variantId || undefined,
-            optionIds: Array.isArray(line.optionIds) ? line.optionIds : Array.isArray(line.selectedOptionIds) ? line.selectedOptionIds : [],
-            selectedOptions: Array.isArray(line.selectedOptions) ? line.selectedOptions : [],
+            optionIds: optionIds,
+            selectedOptions: selectedOptions,
             lineId: typeof line.lineId === 'string' ? line.lineId : null,
             unitCents: Number.isFinite(Number(line.unitCents)) ? Number(line.unitCents) : null,
             lineTotalCents: Number.isFinite(Number(line.lineTotalCents)) ? Number(line.lineTotalCents) : null,
@@ -398,13 +418,14 @@
         publicCart.items.forEach(function(entry) {
           var key = buildDraftKeyFromSummary(entry, occurrenceCounts);
           var meta = catalogItemLookup[entry.catalog_item_id] || {};
+          var optionIds = optionIdsFromSummary(entry);
           mergedItems[key] = {
             itemId: entry.catalog_item_id,
             slug: entry.ecommerce_slug || meta.slug || entry.catalog_item_id,
             name: entry.name || meta.name || 'Item',
             quantity: Math.max(1, Math.min(99, parseInt(entry.quantity, 10) || 1)),
             variantId: entry.variant_id || undefined,
-            optionIds: Array.isArray(entry.selected_option_ids) ? entry.selected_option_ids : [],
+            optionIds: optionIds,
             selectedOptions: Array.isArray(entry.selected_options) ? entry.selected_options : [],
             lineId: typeof entry.line_id === 'string' ? entry.line_id : null,
             unitCents: Number.isFinite(Number(entry.unit_cents)) ? Number(entry.unit_cents) : null,
@@ -843,7 +864,7 @@
           if (status) status.textContent = 'Adding item...';
           try {
             var quantity = Math.max(1, Math.min(99, parseInt(quantityInput.value, 10) || 1));
-            var cart = initialCart && initialCart.items ? initialCart : readCart();
+            var cart = readCart();
             cart.items = cart.items || {};
             var sortedOptionIds = selectedState.optionIds.slice().sort();
             var replaceCartKey = editingCartKey && cart.items[editingCartKey] ? editingCartKey : null;
