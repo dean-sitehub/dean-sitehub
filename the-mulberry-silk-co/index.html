@@ -14,8 +14,8 @@
   <meta name="twitter:image" content="https://dean-sitehub.github.io/dean-sitehub/the-mulberry-silk-co/hero-800x400.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The Mulberry Silk Co — General Retail / Products</title>
-  <meta name="description" content="The Mulberry Silk Co offers mulberry silk bedding and sleep products online, with comfort-focused delivery direct to your door from a trusted specialist.">
+  <title>The Mulberry Silk Co.</title>
+  <meta name="description" content="The Mulberry Silk Co. offers mulberry silk bedding and sleep products delivered direct to customers seeking comfort-focused essentials for home and travel." />
   
   
   
@@ -48,18 +48,91 @@
   ]
 }
 </script>
+<style>
+/* SiteHub rich text alignment + about heading defaults */
+.ql-align-center { text-align: center !important; }
+.ql-align-right { text-align: right !important; }
+.ql-align-justify { text-align: justify !important; }
+#about h2, #about h3 { text-align: center; }
+#about .ql-align-left { text-align: left !important; }
+#about .ql-align-center { text-align: center !important; }
+#about .ql-align-right { text-align: right !important; }
+#about .ql-align-justify { text-align: justify !important; }
+.sitehub-section-intro { max-width: 720px; margin: -0.75rem auto 2rem auto; text-align: center; line-height: 1.7; }
+
+/* Service card additional fields */
+.service-item .service-price {
+  display: block;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.service-item .service-duration {
+  display: block;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--dark-grey);
+  margin: 0.5rem 0;
+}
+
+.service-item .service-features {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto 0 auto;
+  text-align: left;
+  display: inline-block;
+}
+
+.service-item .service-features li {
+  padding: 0.3rem 0;
+  padding-left: 1.6rem;
+  position: relative;
+  font-size: 0.95em;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.service-item .service-features li:before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.service-item .service-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: var(--border-radius-soft);
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 2rem; }
+.gallery-item img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--border-radius, 8px); display: block; }
+</style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-inner">
-      <a href="index.html" class="brand"><img src="logo.png?v=1780955582226" alt="The Mulberry Silk Co logo" class="logo"><span class="brand-name">The Mulberry Silk Co</span></a>
+      <a href="index.html" class="brand"><img src="logo.png?v=1780955582226" alt="The Mulberry Silk Co logo" class="logo"><span class="brand-name">The Mulberry Silk Co.</span></a>
       <nav class="primary-nav" aria-label="Primary navigation">
         <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offerings">Products</a></li>
+        <li><a href="#about">About The Mulberry Silk Co.</a></li>
+        <li><a href="#offerings">Our Products</a></li>
         <li><a href="shop/index.html">Shop Now</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">What Our Clients Say</a></li>
+        <li><a href="#contact">Contact Us</a></li>
         <li class="nav-more">
           <button type="button" class="nav-more-trigger" aria-haspopup="true" aria-expanded="false">Learn More</button>
           <ul class="sub-nav">
@@ -74,52 +147,112 @@
     </div>
   </header>
 
-  <section id="hero" class="section sitehub-hero-motion" style="--sitehub-hero-poster:url('https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/hero-media-library/pexels/video/poster/4520173-1780582447281.webp'); --sitehub-hero-mobile-poster:url('https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/hero-media-library/pexels/video/mobile-poster/4520173-1780582447281.webp'); --sitehub-hero-overlay-opacity:0.35"><div class="sitehub-hero-motion-media" aria-hidden="true"><video class="sitehub-hero-motion-video" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/hero-media-library/pexels/video/poster/4520173-1780582447281.webp"><source src="https://xoastfauilikxrqrgwby.supabase.co/storage/v1/object/public/site-uploads/hero-media-library/pexels/video/video/4520173-1780582446508.mp4" type="video/mp4"></video></div>
+  <section id="hero" class="section">
     <div class="hero-content">
-      <p class="eyebrow">Mulberry silk sleep comfort, delivered direct</p>
-      <h1>The Mulberry Silk Co</h1>
-      <p>Wrap your bedroom in softer sleep with mulberry silk comforters, coordinated sets, and bedding essentials chosen for everyday rest and easy online ordering.</p>
+      <span class="eyebrow">Sleep comfort delivered direct</span>
+<h1>The Mulberry Silk Co.</h1>
+      <p class="hero-tagline">Mulberry silk bedding and sleep essentials designed to make bedtime feel calmer, lighter, and easier to enjoy at home or on the move.</p>
       <div class="hero-actions">
         <a href="#contact" class="cta-button">Get In Touch</a>
-        <a href="shop/index.html" class="btn btn-secondary">Browse the Shop</a>
+        <a href="shop/index.html" class="btn btn-secondary">Shop Now</a>
       </div>
     </div>
   </section>
 
   <section id="about" class="section">
     <div class="container">
-      <h2>About The Mulberry Silk Co</h2>
-      <p>The Mulberry Silk Co focuses on sleep comfort products for people who want their bedding to feel considered, coordinated, and easy to order from home. The collection is centred around mulberry silk essentials, including comforters, linen sets, covers, and bundled sleep sets that help customers build a calmer bedroom experience. Whether someone is refreshing a single item or shopping for a complete sleep setup, the aim is to make quality silk bedding more accessible online.</p>
-      <p>The business presents itself with a straightforward promise: shipping sleep comfort direct to your door. That practical approach shapes the way the range is organised, with featured products, most loved options, and coordinated sets that are simple to browse. Instead of overwhelming shoppers with endless categories, The Mulberry Silk Co keeps attention on a focused bedding range designed around rest, softness, and a more inviting place to sleep.</p>
-      <p>What drives the brand is the idea that better sleep starts with the feel of what surrounds you each night. Customers are looking for products that bring together comfort, ease, and a more polished bedroom finish, and this range speaks directly to that need. The Mulberry Silk Co promises clear product choices, comfort-led shopping, and a dependable direct-to-door experience built around the everyday value of sleeping well.</p>
-    </div>
+      <h2>About The Mulberry Silk Co.</h2>
+<p>The Mulberry Silk Co. focuses on sleep products that keep the experience of rest simple and comfortable. The range is centred on mulberry silk essentials, including comforters, linen sets, covers, flat sheets, pillows, and travel-ready pieces for customers who want bedding products delivered directly to their door. Whether someone is refreshing a bedroom or choosing a lighter layer for travel, the collection is built to make the options easy to understand and easy to shop.</p><p>The business has been serving customers for more than two decades with a product-led approach that stays close to what people actually need at bedtime. Instead of trying to be everything, The Mulberry Silk Co. keeps its attention on a clear sleep range and presents it in a direct, accessible way. That long-running focus gives customers a straightforward place to browse comforters, sets, sheets, and sleep accessories without the clutter that often comes with broader retail stores.</p><p>What guides the brand is a simple promise: ship sleep comfort direct to your door and keep the experience practical from first click to final delivery. The tone is warm, the selection is clear, and the emphasis remains on helping customers choose the right silk sleep item for their home or travel routine. From a full mulberry silk linen set to a silk sleeping bag liner, every item is presented as part of a sleep-focused collection made for everyday use.</p>
+                    <img src="about.jpg?v=1781532119086" alt="About" class="about-photo" loading="lazy">
+                </div>
   </section>
 
   <section id="offerings" class="section">
     <div class="container">
       <h2>Our Products</h2>
-      <p>Explore mulberry silk bedding and sleep essentials designed for coordinated comfort, easy online browsing, and a bedroom setup that feels softer from the moment you unpack it.</p>
+      <p class="sitehub-section-intro">Explore mulberry silk bedding, layered sleep sets, and travel-ready silk essentials from The Mulberry Silk Co. Each product below is presented to help shoppers quickly understand what it offers and where it fits into a restful routine.</p>
       <div class="cards-grid">
-        <div class="card"><div class="card-icon"><i class="fas fa-star"></i></div><h3>Our Featured Products</h3><p>This collection brings together standout pieces from across the range, making it easier to begin with products customers are drawn to first. It is a practical starting point for anyone wanting to explore silk bedding without guessing where to begin.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-bed"></i></div><h3>Mulberry Silk Comforter</h3><p>The mulberry silk comforter is suited to shoppers who want a softer, more refined top layer for everyday sleep. It helps create a bed that looks neatly finished while keeping the focus on comfort night after night.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-layer-group"></i></div><h3>Mulberry Silk Linen Set</h3><p>The linen set is ideal for creating a more coordinated bedroom look with matching pieces that work together. It gives customers a simpler way to refresh their bedding with a cohesive silk-based setup rather than buying item by item.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-cloud-moon"></i></div><h3>Mulberry Silk Pillow and Comforter Set</h3><p>This set combines two key sleep essentials for customers who want a more complete bedding update in one purchase. It offers a balanced option for those who value comfort and a matched finish across the bed.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-gift"></i></div><h3>Silky Sleep Set</h3><p>The Silky Sleep Set is designed for shoppers looking for a coordinated sleep bundle with a softer, more luxurious feel. It is a strong choice for building a consistent bedtime environment without piecing together separate products.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-moon"></i></div><h3>Sleep In</h3><p>Sleep In speaks to relaxed bedroom comfort and products chosen for people who want their bed to feel inviting at the end of a long day. It suits shoppers who prioritise softness, ease, and an indulgent sleep atmosphere.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-heart"></i></div><h3>Most Loved Products</h3><p>This part of the range highlights products that naturally draw the most attention from customers browsing for proven favourites. It is useful for shoppers who want quick direction toward bedding pieces that feel especially giftable, popular, or easy to choose.</p></div>
-        <div class="card"><div class="card-icon"><i class="fas fa-sheet-plastic"></i></div><h3>Mulberry Silk Cover</h3><p>The mulberry silk cover adds a finishing layer to the bed while supporting a smoother, more polished bedroom presentation. It works well for customers who want to update the appearance and feel of their bedding with a single focused purchase.</p></div>
-      </div>
+                    <div class="service-item">
+                        <img src="service-1.jpg?v=1781532119086" alt="Mulberry Silk Comforter" class="service-image">
+                        <h3>Mulberry Silk Comforter</h3>
+                        <p>The Mulberry Silk Comforter is suited to customers who want a dedicated sleep layer that feels refined without looking complicated. It is an easy choice for the main bed, offering a comfort-focused option for people building a softer, more considered bedroom setup. Price: 5379.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-2.jpg?v=1781532119086" alt="Mulberry Silk Linen Set" class="service-image">
+                        <h3>Mulberry Silk Linen Set</h3>
+                        <p>The Mulberry Silk Linen Set brings multiple sleep essentials together for customers who want a coordinated bedding foundation rather than buying piece by piece. It works well for a full room refresh and helps create a cleaner, more unified look across the bed. Price: 15990.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-3.jpg?v=1781532119086" alt="Mulberry Silk Pillow and Comforter Set" class="service-image">
+                        <h3>Mulberry Silk Pillow and Comforter Set</h3>
+                        <p>This set combines two core sleep pieces for shoppers who want a more complete comfort package in one decision. It is ideal for anyone starting with silk bedding or choosing a practical bundle that covers both head and body comfort together. Price: 8480.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-4.jpg?v=1781532119086" alt="Silky Sleep Set" class="service-image">
+                        <h3>Silky Sleep Set</h3>
+                        <p>The Silky Sleep Set is a smaller, accessible way to bring a silk touch into a bedtime routine. It suits customers looking for a lighter entry point into the range or a thoughtful add-on to existing bedding. Price: 1260.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-5.jpg?v=1781532119086" alt="Mulberry Silk Cover" class="service-image">
+                        <h3>Mulberry Silk Cover</h3>
+                        <p>The Mulberry Silk Cover is designed for shoppers who want to protect or complete a bedding layer while keeping the finish consistent with the rest of the silk collection. It is a useful option for customers refining the feel and presentation of their bed. Price: 6703.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-6.jpg?v=1781532119086" alt="Mulberry Silk Flat Sheet" class="service-image">
+                        <h3>Mulberry Silk Flat Sheet</h3>
+                        <p>The Mulberry Silk Flat Sheet adds a flexible silk layer that can be used as part of a complete bed setup or paired with selected existing bedding. It is especially useful for customers who prefer to build their sleep arrangement one carefully chosen piece at a time. Price: 4038.00.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="service-7.jpg?v=1781532119086" alt="Silk Sleeping Bag Liner" class="service-image">
+                        <h3>Silk Sleeping Bag Liner</h3>
+                        <p>The Silk Sleeping Bag Liner is a travel-oriented product for customers who want sleep comfort to carry beyond the bedroom. It works well for overnight trips, guest stays, and packing a familiar silk layer when away from home. Price: 2908.00.</p>
+                    </div>
+                </div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+            <figure class="gallery-item"><img src="gallery-1.jpg" alt="Gallery photo 1" loading="lazy"></figure>
+            <figure class="gallery-item"><img src="gallery-2.jpg" alt="Gallery photo 2" loading="lazy"></figure>
+            <figure class="gallery-item"><img src="gallery-3.jpg" alt="Gallery photo 3" loading="lazy"></figure>
+            <figure class="gallery-item"><img src="gallery-4.jpg" alt="Gallery photo 4" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+<p class="sitehub-section-intro">Here is what our clients say about us.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <blockquote>"We have always enjoyed the mulberry silk comforters. Not only are they long lasting, but they keep us cool in summer and warm in winter. Plus the service is excellent."</blockquote>
+        <cite>— susan pohorly, 5/5 Google review, ⭐⭐⭐⭐⭐</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"We love this duvet. It appears to be 100 Hypoallergenic. It is surprisingly thin and allows one to cuddle up with it like a thin blanket. Very warm and easy to use. We love it. Thank you. Frank"</blockquote>
+        <cite>— Beaconsfield Beaconsfield, 5/5 Google review, ⭐⭐⭐⭐⭐</cite>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>"Quilt is a great weight. It provides enough warmth but is breathable so I don’t end up sweating in the middle of the night."</blockquote>
+        <cite>— Katherine Everett, 4/5 Google review, ⭐⭐⭐⭐⭐</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="section">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>We’d love to hear from you. If you have a product question, need help choosing a set, or want support with your order, get in touch below.</p>
+      <p class="sitehub-section-intro">We'd love to hear from you — reach out to us anytime to ask about our mulberry silk bedding range, delivery, or the best product for your sleep setup.</p>
       <div class="contact-details-row">
-        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>Online store serving customers direct to their door</span></div>
+        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div><span>Online store serving customers directly</span></div>
         <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-envelope"></i></div><a href="mailto:martin@themulberrysilkco.com">martin@themulberrysilkco.com</a></div>
-        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:">Contact by email</a></div>
+        <div class="contact-item"><div class="contact-icon-circle"><i class="fas fa-phone"></i></div><a href="tel:+27000000000">+27000000000</a></div>
       </div>
       <div class="social-links">
         <a class="social-circle" href="https://www.facebook.com/pages/The-Mulberry-Silk-Co/118386651544506" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
