@@ -195,6 +195,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --secondary-color: #d6a35d !important;
   --secondary-blue: #d6a35d !important;
   --logo-filter: none !important;
+  --sitehub-logo-max-height: 40px !important;
   --font-heading: 'Montserrat', sans-serif !important;
   --heading-font: 'Montserrat', sans-serif !important;
   --font-body: 'Open Sans', sans-serif !important;
@@ -220,4 +221,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 
 @media (max-width: 640px) { #hero.hero-split .hero-split-text { min-height: clamp(300px, 52svh, 500px) !important; } #hero.hero-split .hero-split-image { min-height: clamp(220px, 34svh, 320px) !important; } #hero.hero-split .hero-actions { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; } #hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { width: 100% !important; max-width: none !important; flex: 1 1 auto !important; } }
 
+header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
+
 /* === END CUSTOM STYLING === */
+
