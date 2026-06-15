@@ -182,3 +182,42 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 
 /* ── SiteHub managed hero motion (post-processed) ── */
 .sitehub-hero-motion{position:relative;isolation:isolate;overflow:hidden;background-image:var(--sitehub-hero-mobile-poster,var(--sitehub-hero-poster));background-position:center;background-size:cover;background-repeat:no-repeat}.sitehub-hero-motion::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,24,var(--sitehub-hero-overlay-opacity,0.35)),rgba(10,15,24,calc(var(--sitehub-hero-overlay-opacity,0.35) + 0.10)));z-index:1;pointer-events:none}.sitehub-hero-motion>.sitehub-hero-motion-media{position:absolute;inset:0;z-index:0;pointer-events:none}.sitehub-hero-motion>.sitehub-hero-motion-media video{width:100%;height:100%;object-fit:cover;display:block}.sitehub-hero-motion>.hero-content,.sitehub-hero-motion>.container,.sitehub-hero-motion>.hero-split-text,.sitehub-hero-motion>.hero-split-image,.sitehub-hero-motion>*:not(.sitehub-hero-motion-media){position:relative;z-index:2}.sitehub-hero-motion.hero-split{display:block !important;min-height:clamp(540px,78svh,760px)}.sitehub-hero-motion.hero-split .hero-split-image{display:none !important}.sitehub-hero-motion.hero-split .hero-split-text{background:transparent !important;min-height:inherit;display:flex;align-items:center;justify-content:center;padding:clamp(28px,6vw,72px)}.sitehub-hero-motion.hero-split .hero-content{max-width:min(760px,92vw);margin:0 auto;text-align:center}@media (prefers-reduced-motion:reduce){.sitehub-hero-motion>.sitehub-hero-motion-media{display:none}.sitehub-hero-motion{background-image:var(--sitehub-hero-mobile-poster,var(--sitehub-hero-poster)) !important;background-position:center;background-size:cover}}
+
+
+/* === SITEHUB CUSTOM STYLING === */
+/* Auto-generated from user styling preferences */
+
+:root {
+  --color-primary: #7c3f20 !important;
+  --primary-color: #7c3f20 !important;
+  --primary-blue: #7c3f20 !important;
+  --color-secondary: #d6a35d !important;
+  --secondary-color: #d6a35d !important;
+  --secondary-blue: #d6a35d !important;
+  --logo-filter: none !important;
+  --font-heading: 'Montserrat', sans-serif !important;
+  --heading-font: 'Montserrat', sans-serif !important;
+  --font-body: 'Open Sans', sans-serif !important;
+  --body-font: 'Open Sans', sans-serif !important;
+}
+
+#hero.hero-split .cta-button, #hero .cta-button { background: #d6a35d !important; border-color: transparent !important; }
+
+#hero.hero-split .cta-button, #hero .cta-button { color: #7c3f20 !important; }
+#hero.hero-split .btn.btn-secondary, #hero .btn.btn-secondary { color: #7c3f20 !important; border-color: #7c3f2066 !important; }
+
+#hero.hero-split .hero-actions { display: flex !important; flex-wrap: wrap !important; gap: 12px !important; align-items: stretch !important; }
+#hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { display: inline-flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; min-height: 48px !important; width: auto !important; max-width: 100% !important; padding: 12px 20px !important; line-height: 1.2 !important; white-space: normal !important; border-width: 1px !important; border-style: solid !important; border-radius: 9999px !important; flex: 1 1 180px !important; }
+#hero.hero-split .hero-actions > .cta-button { border-color: transparent !important; }
+
+#hero.hero-split .hero-split-image { background-position: 50% 50% !important; background-size: cover !important; background-repeat: no-repeat !important; }
+
+.sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(1.00) !important; transform-origin: 50% 50% !important; }
+
+@media (max-width: 1024px) { #hamburger { display: block !important; } header .nav-inner { min-height: 78px !important; } header img.logo { max-height: 64px !important; max-width: min(230px, 52vw) !important; } nav #nav-links { display: none !important; flex-direction: column !important; align-items: stretch !important; gap: 0 !important; position: absolute !important; top: 78px; left: 0; right: 0; background: rgba(255,255,255,.99) !important; padding: 10px 20px !important; z-index: 999 !important; border-top: 1px solid rgba(0,0,0,.1) !important; box-shadow: 0 16px 32px rgba(15,23,42,.12) !important; } nav #nav-links.open { display: flex !important; } nav #nav-links li { width: 100% !important; } nav #nav-links a, nav #nav-links .nav-more-trigger { display: flex !important; width: 100% !important; justify-content: space-between !important; padding: 12px 0 !important; } header .brand-name { max-width: min(42vw, 280px) !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; } }
+
+@media (max-width: 860px) { #hero.hero-split { min-height: auto !important; } #hero.hero-split .hero-split-text { min-height: clamp(320px, 56svh, 560px) !important; padding: clamp(20px, 6vw, 32px) !important; } #hero.hero-split .hero-content { max-width: min(100%, 32rem) !important; } #hero.hero-split h1 { font-size: clamp(1.9rem, 9vw, 3rem) !important; line-height: 1 !important; } #hero.hero-split p { font-size: clamp(.98rem, 3.6vw, 1.05rem) !important; line-height: 1.55 !important; margin-bottom: .95rem !important; } #hero.hero-split .eyebrow { font-size: .72rem !important; letter-spacing: .16em !important; margin-bottom: .75rem !important; } #hero.hero-split .hero-split-image { min-height: clamp(240px, 38svh, 420px) !important; } }
+
+@media (max-width: 640px) { #hero.hero-split .hero-split-text { min-height: clamp(300px, 52svh, 500px) !important; } #hero.hero-split .hero-split-image { min-height: clamp(220px, 34svh, 320px) !important; } #hero.hero-split .hero-actions { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; } #hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { width: 100% !important; max-width: none !important; flex: 1 1 auto !important; } }
+
+/* === END CUSTOM STYLING === */
