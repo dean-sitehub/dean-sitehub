@@ -197,7 +197,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --secondary-color: #d6a35d !important;
   --secondary-blue: #d6a35d !important;
   --logo-filter: none !important;
-  --sitehub-logo-max-height: 120px !important;
+  --sitehub-logo-max-height: 80px !important;
   --sitehub-hero-section-bg: #ffffff !important;
   --sitehub-hero-panel-bg: #030630 !important;
   --sitehub-hero-text: #ffffff !important;
@@ -270,6 +270,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
