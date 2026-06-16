@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
   --color-primary: #7c3f20;
   --color-secondary: #d6a35d;
@@ -196,6 +198,9 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
   --secondary-blue: #d6a35d !important;
   --logo-filter: none !important;
   --sitehub-logo-max-height: 120px !important;
+  --sitehub-hero-section-bg: #ffffff !important;
+  --sitehub-hero-panel-bg: #030630 !important;
+  --sitehub-hero-text: #ffffff !important;
   --font-heading: 'Montserrat', sans-serif !important;
   --heading-font: 'Montserrat', sans-serif !important;
   --font-body: 'Open Sans', sans-serif !important;
@@ -216,9 +221,17 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 @keyframes sitehubHeroPanelFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes sitehubHeroPanelPulse { 0%,100% { filter: saturate(1); } 50% { filter: saturate(1.08) brightness(1.03); } }
 @keyframes sitehubHeroPanelShimmer { 0% { background-position: 0 0; } 100% { background-position: 40px 40px; } }
+@keyframes sitehubHeroPanelGlow { 0%,100% { box-shadow: 0 18px 44px rgba(15,23,42,0.16), inset 0 0 0 1px rgba(255,255,255,0.22); } 50% { box-shadow: 0 24px 58px rgba(15,23,42,0.22), inset 0 0 28px rgba(255,255,255,0.28); } }
+@keyframes sitehubHeroPanelBreathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+@keyframes sitehubHeroPanelTilt { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(-0.45deg); } }
 #hero.hero-split .hero-split-text { --sitehub-hero-panel-animation: pulse !important; animation: sitehubHeroPanelPulse 6s ease-in-out infinite !important; }
 
-#hero.hero-split .hero-split-image { background-position: 50% 50% !important; background-size: cover !important; background-repeat: no-repeat !important; }
+#hero.hero-split { background-image: none !important; display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }
+#hero.hero-split::before, #hero.hero-split::after { display: none !important; background: none !important; background-image: none !important; }
+#hero.hero-split .hero-split-text { display: flex !important; align-items: center !important; justify-content: center !important; min-height: clamp(520px, 72svh, 760px) !important; padding: clamp(32px, 6vw, 72px) !important; background-color: var(--sitehub-hero-panel-bg, #5baed3) !important; color: var(--sitehub-hero-text, #ffffff) !important; position: relative !important; z-index: 2 !important; overflow: hidden !important; }
+#hero.hero-split .hero-split-text .hero-content { width: min(84%, 560px) !important; max-width: 560px !important; margin: 0 auto !important; padding: 0 !important; display: block !important; position: relative !important; z-index: 3 !important; }
+#hero.hero-split .hero-split-text .eyebrow, #hero.hero-split .hero-split-text h1, #hero.hero-split .hero-split-text .hero-tagline, #hero.hero-split .hero-split-text .hero-subtitle, #hero.hero-split .hero-split-text .hero-benefit, #hero.hero-split .hero-split-text .sitehub-hero-subtitle, #hero.hero-split .hero-split-text p { color: var(--sitehub-hero-text, #ffffff) !important; }
+#hero.hero-split .hero-split-image { display: block !important; min-height: clamp(520px, 72svh, 760px) !important; position: relative !important; z-index: 1 !important; background-image: url('the-mulberry-silk-co/hero-800x400.jpg') !important; background-position: 50% 50% !important; background-size: auto 100% !important; background-repeat: no-repeat !important; }
 
 .sitehub-hero-motion .sitehub-hero-motion-media video { object-position: 50% 50% !important; transform: scale(1.00) !important; transform-origin: 50% 50% !important; }
 
@@ -228,22 +241,26 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 
 @media (max-width: 640px) { #hero.hero-split .hero-split-text { min-height: clamp(300px, 52svh, 500px) !important; } #hero.hero-split .hero-split-image { min-height: clamp(220px, 34svh, 320px) !important; } #hero.hero-split .hero-actions { flex-direction: column !important; align-items: stretch !important; gap: 10px !important; } #hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { width: 100% !important; max-width: none !important; flex: 1 1 auto !important; } }
 
+:root { --sitehub-hero-panel-bg: #030630 !important; }
+#hero.hero-split .hero-split-text { background-color: var(--sitehub-hero-panel-bg) !important; }
+#hero.hero-split .hero-split-text::before { display: none !important; }
+
 @media (min-width: 861px) {
 #hero.hero-split .hero-split-text { position: relative !important; overflow: hidden !important; display: block !important; }
 #hero.hero-split .hero-split-text::before { display: none !important; }
 #hero.hero-split .hero-split-text .hero-content { position: absolute !important; display: block !important; max-width: none !important; margin: 0 !important; padding: 0 !important; left: 8% !important; top: 10% !important; width: 84% !important; height: 78% !important; min-height: 78% !important; }
 #hero.hero-split .hero-split-text .hero-content .hero-actions { display: contents !important; }
-#hero.hero-split .hero-split-text .hero-content > .eyebrow { position: absolute !important; left: 0% !important; top: 0% !important; width: 72% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 1.35 !important; }
-#hero.hero-split .hero-split-text .hero-content > h1 { position: absolute !important; left: 0% !important; top: 14% !important; width: 82% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 0.92 !important; text-wrap: initial !important; }
-#hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle { position: absolute !important; left: 0% !important; top: 50% !important; width: 72% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 1.35 !important; }
-#hero.hero-split .hero-split-text .hero-content > .eyebrow { font-size: clamp(0.72rem, 1vw, 0.95rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
-#hero.hero-split .hero-split-text .hero-content > h1 { font-size: clamp(1.9rem, 4vw, 4.6rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
-#hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle { font-size: clamp(0.95rem, 1.4vw, 1.5rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
+#hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-eyebrow { position: absolute !important; left: 0% !important; top: 0% !important; width: 72% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 1.35 !important; }
+#hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-heading, #hero.hero-split .hero-split-text .hero-content > .hero-title { position: absolute !important; left: 0% !important; top: 14% !important; width: 82% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 0.92 !important; text-wrap: initial !important; }
+#hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > .hero-benefit, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle { position: absolute !important; left: 0% !important; top: 50% !important; width: 72% !important; max-width: none !important; text-align: left !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top left !important; display: block !important; line-height: 1.35 !important; }
+#hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-eyebrow { font-size: clamp(0.72rem, 1vw, 0.95rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
+#hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-heading, #hero.hero-split .hero-split-text .hero-content > .hero-title { font-size: clamp(1.9rem, 4vw, 4.6rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
+#hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > .hero-benefit, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle { font-size: clamp(0.95rem, 1.4vw, 1.5rem) !important; font-weight: 400 !important; font-style: normal !important; text-transform: none !important; letter-spacing: 0em !important; }
 #hero.hero-split .hero-split-text .hero-content > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button { position: absolute !important; left: 0% !important; top: 70% !important; width: 28% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; white-space: normal !important; line-height: 1.2 !important; box-sizing: border-box !important; border: 1px solid transparent !important; }
 #hero.hero-split .hero-split-text .hero-content > .btn.btn-secondary, #hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: absolute !important; left: 32% !important; top: 70% !important; width: 28% !important; max-width: none !important; text-align: center !important; margin: 0 !important; transform: scale(1) !important; transform-origin: top center !important; display: inline-flex !important; justify-content: center !important; align-items: center !important; white-space: normal !important; line-height: 1.2 !important; box-sizing: border-box !important; border-width: 1px !important; border-style: solid !important; }
 }
 @media (max-width: 860px) {
-#hero.hero-split .hero-split-text .hero-content, #hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle, #hero.hero-split .hero-split-text .hero-content > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button, #hero.hero-split .hero-split-text .hero-content > .btn.btn-secondary, #hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: static !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; min-height: 0 !important; text-align: left !important; transform: none !important; transform-origin: center center !important; max-width: 100% !important; }
+#hero.hero-split .hero-split-text .hero-content, #hero.hero-split .hero-split-text .hero-content > .eyebrow, #hero.hero-split .hero-split-text .hero-content > h1, #hero.hero-split .hero-split-text .hero-content > .hero-tagline, #hero.hero-split .hero-split-text .hero-content > .hero-subtitle, #hero.hero-split .hero-split-text .hero-content > .hero-benefit, #hero.hero-split .hero-split-text .hero-content > .sitehub-hero-subtitle, #hero.hero-split .hero-split-text .hero-content > p.hero-tagline, #hero.hero-split .hero-split-text .hero-content > p.hero-subtitle, #hero.hero-split .hero-split-text .hero-content > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button, #hero.hero-split .hero-split-text .hero-content > .btn.btn-secondary, #hero.hero-split .hero-split-text .hero-content .hero-actions > .btn.btn-secondary { position: static !important; left: auto !important; top: auto !important; width: auto !important; height: auto !important; min-height: 0 !important; text-align: left !important; transform: none !important; transform-origin: center center !important; max-width: 100% !important; }
 #hero.hero-split .hero-split-text .hero-content { text-align: left !important; }
 #hero.hero-split .hero-split-text .hero-content .hero-actions { display: flex !important; flex-wrap: wrap !important; gap: 12px !important; justify-content: flex-start !important; align-items: stretch !important; }
 #hero.hero-split .hero-split-text .hero-content > .cta-button, #hero.hero-split .hero-split-text .hero-content .hero-actions > .cta-button { display: inline-flex !important; justify-content: center !important; align-items: center !important; width: min(100%, 280px) !important; max-width: 100% !important; min-height: 48px !important; padding: 12px 20px !important; white-space: normal !important; line-height: 1.2 !important; box-sizing: border-box !important; flex: 1 1 220px !important; border: 1px solid transparent !important; }
@@ -253,6 +270,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
