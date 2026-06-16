@@ -216,7 +216,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 #hero.hero-split .hero-actions > .cta-button, #hero.hero-split .hero-actions > .btn.btn-secondary { display: inline-flex !important; align-items: center !important; justify-content: center !important; box-sizing: border-box !important; min-height: 48px !important; width: auto !important; max-width: 100% !important; padding: 12px 20px !important; line-height: 1.2 !important; white-space: normal !important; border-width: 1px !important; border-style: solid !important; border-radius: 9999px !important; flex: 1 1 180px !important; }
 #hero.hero-split .hero-actions > .cta-button { border-color: transparent !important; }
 
-#hero.hero-split .hero-split-text { --sitehub-hero-panel-texture: linen !important; background-image: linear-gradient(0deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 22px), linear-gradient(90deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 22px) !important; background-size: 22px 22px !important; }
+#hero.hero-split .hero-split-text { --sitehub-hero-panel-texture: glass-border !important; border: 1px solid rgba(255,255,255,0.42) !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 22px 48px rgba(15,23,42,0.18) !important; border-radius: 24px !important; backdrop-filter: blur(3px) !important; }
 
 @keyframes sitehubHeroPanelFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes sitehubHeroPanelPulse { 0%,100% { filter: saturate(1); } 50% { filter: saturate(1.08) brightness(1.03); } }
@@ -270,6 +270,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}main>section:not(#hero),body>
 header img.logo, .logo, .site-logo { max-height: var(--sitehub-logo-max-height) !important; width: auto !important; }
 
 /* === END CUSTOM STYLING === */
+
 
 
 
