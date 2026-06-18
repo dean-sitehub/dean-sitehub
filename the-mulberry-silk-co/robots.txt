@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://dean-sitehub.github.io/dean-sitehub/the-mulberry-silk-co/sitemap.xml
